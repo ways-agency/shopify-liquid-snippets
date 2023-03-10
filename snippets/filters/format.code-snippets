@@ -1,0 +1,27 @@
+{
+  "Filter - format | date": {
+    "prefix": "date",
+    "description": "Converts a timestamp into another date format. The date filter accepts the same parameters as Ruby's strftime method for formatting the date. For a list of shorthand formats, refer to the Ruby documentation or strftime reference and sandbox.",
+    "body": "| date: '${1:%B %d, %Y}'"
+  },
+  "Filter - format | date (format)": {
+    "prefix": "date:filter",
+    "description": "Converts a timestamp into another date format. Specify a locale-aware date format. You can use the following formats: abbreviated_date, basic, date, date_at_time, default, on_date",
+    "body": "| date: format:'${1:abbreviated_date}'"
+  },
+  "Filter - format | json": {
+    "prefix": "json",
+    "description": "Converts a string, or object, into JSON format.",
+    "body": "| json"
+  },
+  "Filter - format | weight_with_unit": {
+    "prefix": "weight_with_unit",
+    "description": "Generates a formatted weight for a variant object. The weight unit is set in the general settings in the Shopify admin.",
+    "body": "| weight_with_unit"
+  },
+  "Filter - format | weight_with_unit (variable)": {
+    "prefix": "weight_with_unit:variant",
+    "description": "Generates a formatted weight for a variant object. The weight unit is set in the general settings in the Shopify admin.",
+    "body": "| weight_with_unit: ${1:variable}"
+  }
+}
