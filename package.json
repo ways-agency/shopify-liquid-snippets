@@ -1,0 +1,29 @@
+{
+  "name": "shopify-liquid-snippets",
+  "displayName": "Shopify Liquid Snippets",
+  "description": "Shopify Liquid snippets",
+  "version": "0.0.1",
+  "publisher": "Ways Agency",
+  "icon": "images/shopify-liquid-snippets-logo.png",
+  "preview": true,
+  "repository": {
+    "directory": "",
+    "type": "",
+    "url": ""
+  },
+  "author": {
+    "name": "Ways Agency"
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "scripts": {
+    "package": "vsce package"
+  },
+  "contributes": {
+    "snippets": []
+  }
+}
