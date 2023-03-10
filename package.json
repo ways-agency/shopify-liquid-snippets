@@ -6,10 +6,15 @@
   "publisher": "Ways Agency",
   "icon": "images/shopify-liquid-snippets-logo.png",
   "preview": true,
+  "scripts": {
+    "package": "vsce package"
+  },
   "repository": {
-    "directory": "",
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/ways-agency/shopify-liquid-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ways-agency/shopify-liquid-snippets/issues"
   },
   "author": {
     "name": "Ways Agency"
@@ -20,9 +25,11 @@
   "categories": [
     "Snippets"
   ],
-  "scripts": {
-    "package": "vsce package"
-  },
+  "keywords": [
+    "shopify",
+    "liquid",
+    "snippets"
+  ],
   "contributes": {
     "snippets": []
   }
