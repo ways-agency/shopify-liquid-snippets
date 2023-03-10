@@ -63,6 +63,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/format.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/html.code-snippets"
       }
     ]
   }
