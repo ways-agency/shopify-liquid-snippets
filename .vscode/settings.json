@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["desaturate", "Desaturates", "RGBA", "shopify"]
+  "cSpell.words": ["desaturate", "Desaturates", "RGBA", "shopify"],
+  "npm-scripts.showStartNotification": false
 }

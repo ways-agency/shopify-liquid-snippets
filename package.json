@@ -55,6 +55,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/default.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/font.code-snippets"
       }
     ]
   }

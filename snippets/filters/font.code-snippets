@@ -1,0 +1,17 @@
+{
+  "Filter - font | font_face": {
+    "prefix": "font_face",
+    "description": "Generates a CSS @font_face declaration to load the provided font.",
+    "body": "| font_face"
+  },
+  "Filter - font | font_modify": {
+    "prefix": "font_modify",
+    "description": "Modifies a specific property of a given font. The font_modify filter requires two parameters. The first indicates which property should be modified and the second is either the new value, or modification amount, for that property.",
+    "body": "| font_modify: '${1:style}', '${2:weight}'"
+  },
+  "Filter - font | font_url": {
+    "prefix": "font_url",
+    "description": "Returns the CDN URL for the provided font in woff2 format.",
+    "body": "| font_url${1:: '${2:format}'}"
+  }
+}
