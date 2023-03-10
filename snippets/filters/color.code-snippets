@@ -1,0 +1,72 @@
+{
+    "Filter - color | brightness_difference": {
+        "prefix": "brightness_difference",
+        "description": "Calculates the perceived brightness difference between two colors.",
+        "body": "| brightness_difference: '${1:string}'"
+    },
+    "Filter - color | color_brightness": {
+        "prefix": "color_brightness",
+        "description": "Calculates the perceived brightness of a given color.",
+        "body": "| color_brightness"
+    },
+    "Filter - color | color_contrast": {
+        "prefix": "color_contrast",
+        "description": "Calculates the contrast ratio between two colors and returns the ratio's numerator. The ratio's denominator, which isn't returned, is always 1. For example, with a contrast ratio of 3.5:1, this filter returns 3.5. The order in which you specify the colors doesn't matter.",
+        "body": "| color_contrast: '${1:string}'"
+    },
+    "Filter - color | color_darken": {
+        "prefix": "color_darken",
+        "description": "Darkens a given color by a specific percentage. The percentage must be between 0 and 100.",
+        "body": "| color_darken: ${1:number}"
+    },
+    "Filter - color | color_desaturate": {
+        "prefix": "color_desaturate",
+        "description": "Desaturates a given color by a specific percentage. The percentage must be between 0 and 100.",
+        "body": "| color_desaturate: ${1:number}"
+    },
+    "Filter - color | color_difference": {
+        "prefix": "color_difference",
+        "description": "Calculates the color difference between two colors.",
+        "body": "| color_difference: '${1:string}'"
+    },
+    "Filter - color | color_extract": {
+        "prefix": "color_extract",
+        "description": "Extracts a specific color component from a given color. Accepts the following color components: alpha, red, green, blue, hue, saturation, lightness.",
+        "body": "| color_extract: '${1:string}'"
+    },
+    "Filter - color | color_lighten": {
+        "prefix": "color_lighten",
+        "description": "Lightens a given color by a specific percentage. The percentage must be between 0 and 100.",
+        "body": "| color_lighten: ${1:number}"
+    },
+    "Filter - color | color_mix": {
+        "prefix": "color_mix",
+        "description": "Blends two colors together by a specific percentage factor. The percentage must be between 0 and 100.",
+        "body": "| color_mix: '${1:string}', ${2:number}"
+    },
+    "Filter - color | color_modify": {
+        "prefix": "color_modify",
+        "description": "Modifies a specific color component of a given color by a specific amount.",
+        "body": "| color_modify: '${1:string}', ${2:number}"
+    },
+    "Filter - color | color_saturate": {
+        "prefix": "color_saturate",
+        "description": "Saturates a given color by a specific percentage. The percentage must be between 0 and 100.",
+        "body": "| color_saturate: ${1:number}"
+    },
+    "Filter - color | color_to_hex": {
+        "prefix": "color_to_hex",
+        "description": "Converts a CSS color string to hexadecimal format (hex6). Because colors are converted to hex6 format, if a color with an alpha component is provided, then the alpha component is excluded from the output.",
+        "body": "| color_to_hex"
+    },
+    "Filter - color | color_to_hsl": {
+        "prefix": "color_to_hsl",
+        "description": "Converts a CSS color string to HSL format. If a color with an alpha component is provided, the color is converted to HSLA format.",
+        "body": "| color_to_hsl"
+    },
+    "Filter - color | color_to_rgb": {
+        "prefix": "color_to_rgb",
+        "description": "Converts a CSS color string to RGB format. If a color with an alpha component is provided, then the color is converted to RGBA format.",
+        "body": "| color_to_rgb"
+    },
+}
