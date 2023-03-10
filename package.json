@@ -47,6 +47,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/color.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/customer.code-snippets"
       }
     ]
   }
