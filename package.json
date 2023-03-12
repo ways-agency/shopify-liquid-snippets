@@ -79,6 +79,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/math.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/media.code-snippets"
       }
     ]
   }
