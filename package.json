@@ -115,6 +115,10 @@
       {
         "language": "liquid",
         "path": "./snippets/tags/iteration.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/tags/syntax.code-snippets"
       }
     ]
   }
