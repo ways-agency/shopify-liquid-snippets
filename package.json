@@ -87,6 +87,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/metafield.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/money.code-snippets"
       }
     ]
   }
