@@ -1,0 +1,20 @@
+{
+  "Tag - html | form": {
+    "prefix": "form",
+    "description": "Generates an HTML <form> tag, including any required <input> tags to submit the form to a specific endpoint. Because there are many different form types available in Shopify themes, the form tag requires a type. Depending on the form type, an additional parameter might be required.",
+    "body": [
+        "{%- form '${1:type}'${2:, ${3:object}}${4:, ${5:attribute}: '$6'} -%}",
+        "  $7",
+        "{%- endform -%}"
+    ]
+  },
+  "Tag - html | style": {
+    "prefix": "style",
+    "description": "Generates an HTML <style> tag with an attribute of data-shopify. If you reference color settings inside style tags, then the associated CSS rules will update as the setting is changed in the theme editor, without a page refresh.",
+    "body": [
+        "{%- style -%}",
+        "  $1",
+        "{%- endstyle -%}"
+    ]
+  },
+}
