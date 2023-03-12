@@ -1,0 +1,22 @@
+{
+  "Filter - payment | payment_button": {
+    "prefix": "payment_button",
+    "description": "Generates an HTML container to host dynamic checkout buttons for a product. The payment_button filter must be used on the form object within a product form.",
+    "body": "| payment_button"
+  },
+  "Filter - payment | payment_terms": {
+    "prefix": "payment_terms",
+    "description": "Generates the HTML for the Shop Pay Installments banner. The payment_terms filter must be used on the form object within a product form or cart form.",
+    "body": "| payment_terms"
+  },
+  "Filter - payment | payment_type_img_url": {
+    "prefix": "payment_type_img_url",
+    "description": "Returns the URL for an SVG image of a given payment type.",
+    "body": "| payment_type_img_url"
+  },
+  "Filter - payment | payment_type_svg_tag": {
+    "prefix": "payment_type_svg_tag",
+    "description": "Generates an HTML <svg> tag for a given payment type.",
+    "body": "| payment_type_svg_tag${1:: class: '$2'}"
+  }
+}
