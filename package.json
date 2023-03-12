@@ -83,6 +83,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/media.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/metafield.code-snippets"
       }
     ]
   }

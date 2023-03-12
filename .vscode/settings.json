@@ -1,4 +1,12 @@
 {
-  "cSpell.words": ["datetime", "desaturate", "Desaturates", "iframe", "RGBA", "shopify"],
+  "cSpell.words": [
+    "datetime",
+    "desaturate",
+    "Desaturates",
+    "iframe",
+    "metafield",
+    "RGBA",
+    "shopify"
+  ],
   "npm-scripts.showStartNotification": false
 }
