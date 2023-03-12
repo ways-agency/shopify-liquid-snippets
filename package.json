@@ -95,6 +95,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/payment.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/string.code-snippets"
       }
     ]
   }

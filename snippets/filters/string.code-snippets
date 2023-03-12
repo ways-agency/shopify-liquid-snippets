@@ -1,0 +1,197 @@
+{
+  "Filter - string | append": {
+    "prefix": "append",
+    "description": "Adds a given string to the end of a string.",
+    "body": "| append: '$1'"
+  },
+  "Filter - string | base64_decode": {
+    "prefix": "base64_decode",
+    "description": "Decodes a string in Base64 format.",
+    "body": "| base64_decode"
+  },
+  "Filter - string | base64_encode": {
+    "prefix": "base64_encode",
+    "description": "Encodes a string to Base64 format.",
+    "body": "| base64_encode"
+  },
+  "Filter - string | base64_url_safe_decode": {
+    "prefix": "base64_url_safe_decode",
+    "description": "Decodes a string in URL-safe Base64 format.",
+    "body": "| base64_url_safe_decode"
+  },
+  "Filter - string | base64_url_safe_encode": {
+    "prefix": "base64_url_safe_encode",
+    "description": "Encodes a string to URL-safe Base64 format. To produce URL-safe Base64, this filter uses - and _ in place of + and /.",
+    "body": "| base64_url_safe_encode"
+  },
+  "Filter - string | camelize": {
+    "prefix": "camelize",
+    "description": "Converts a string to CamelCase.",
+    "body": "| camelize"
+  },
+  "Filter - string | capitalize": {
+    "prefix": "capitalize",
+    "description": "Capitalizes the first word in a string.",
+    "body": "| capitalize"
+  },
+  "Filter - string | downcase": {
+    "prefix": "downcase",
+    "description": "Converts a string to all lowercase characters.",
+    "body": "| downcase"
+  },
+  "Filter - string | escape": {
+    "prefix": "escape",
+    "description": "Escapes special characters in HTML, such as <>, ', and &, and converts characters into escape sequences. The filter doesn't effect characters within the string that don’t have a corresponding escape sequence.",
+    "body": "| escape"
+  },
+  "Filter - string | escape_once": {
+    "prefix": "escape_once",
+    "description": "Escapes a string without changing characters that have already been escaped.",
+    "body": "| escape_once"
+  },
+  "Filter - string | handleize": {
+    "prefix": "handleize",
+    "description": "Converts a string into a handle.",
+    "body": "| handleize"
+  },
+  "Filter - string | hmac_sha1": {
+    "prefix": "hmac_sha1",
+    "description": "Converts a string into an SHA-1 hash using a hash message authentication code (HMAC). The secret key for the message is supplied as a parameter to the filter.",
+    "body": "| hmac_sha1: '$1'"
+  },
+  "Filter - string | hmac_sha256": {
+    "prefix": "hmac_sha256",
+    "description": "Converts a string into an SHA-256 hash using a hash message authentication code (HMAC). The secret key for the message is supplied as a parameter to the filter.",
+    "body": "| hmac_sha256: '$1'"
+  },
+  "Filter - string | lstrip": {
+    "prefix": "lstrip",
+    "description": "Strips all whitespace from the left of a string.",
+    "body": "| lstrip"
+  },
+  "Filter - string | md5": {
+    "prefix": "md5",
+    "description": "Converts a string into an MD5 hash.",
+    "body": "| md5"
+  },
+  "Filter - string | newline_to_br": {
+    "prefix": "newline_to_br",
+    "description": "Converts newlines (\n) in a string to HTML line breaks (<br>).",
+    "body": "| newline_to_br"
+  },
+  "Filter - string | pluralize": {
+    "prefix": "pluralize",
+    "description": "Outputs the singular or plural version of a string based on a given number.",
+    "body": "| pluralize: '$1', '$2'"
+  },
+  "Filter - string | prepend": {
+    "prefix": "prepend",
+    "description": "Adds a given string to the beginning of a string.",
+    "body": "| prepend: '$1'"
+  },
+  "Filter - string | remove": {
+    "prefix": "remove",
+    "description": "Removes any instance of a substring inside a string.",
+    "body": "| remove: '$1'"
+  },
+  "Filter - string | remove_first": {
+    "prefix": "remove_first",
+    "description": "Removes the first instance of a substring inside a string.",
+    "body": "| remove_first: '$1'"
+  },
+  "Filter - string | remove_last": {
+    "prefix": "remove_last",
+    "description": "Removes the last instance of a substring inside a string.",
+    "body": "| remove_last: '$1'"
+  },
+  "Filter - string | replace": {
+    "prefix": "replace",
+    "description": "Replaces any instance of a substring inside a string with a given string.",
+    "body": "| replace: '$1', '$2'"
+  },
+  "Filter - string | replace_first": {
+    "prefix": "replace_first",
+    "description": "Replaces the first instance of a substring inside a string with a given string.",
+    "body": "| replace_first: '$1', '$2'"
+  },
+  "Filter - string | replace_last": {
+    "prefix": "replace_last",
+    "description": "Replaces the last instance of a substring inside a string with a given string.",
+    "body": "| replace_last: '$1', '$2'"
+  },
+  "Filter - string | rstrip": {
+    "prefix": "rstrip",
+    "description": "Strips all whitespace from the right of a string.",
+    "body": "| rstrip"
+  },
+  "Filter - string | sha1": {
+    "prefix": "sha1",
+    "description": "Converts a string into an SHA-1 hash.",
+    "body": "| sha1"
+  },
+  "Filter - string | sha256": {
+    "prefix": "sha256",
+    "description": "Converts a string into an SHA-256 hash.",
+    "body": "| sha256"
+  },
+  "Filter - string | slice": {
+    "prefix": "slice",
+    "description": "Returns a substring or series of array items, starting at a given 0-based index. By default, the substring has a length of one character, and the array series has one array item. However, you can provide a second parameter to specify the number of characters or array items.",
+    "body": "| slice: ${1:start}${2:, ${3:end}}"
+  },
+  "Filter - string | split": {
+    "prefix": "split",
+    "description": "Splits a string into an array of substrings based on a given separator.",
+    "body": "| split: '$1'"
+  },
+  "Filter - string | strip": {
+    "prefix": "strip",
+    "description": "Strips all whitespace from the left and right of a string.",
+    "body": "| strip"
+  },
+  "Filter - string | strip_html": {
+    "prefix": "strip_html",
+    "description": "Strips all HTML tags from a string.",
+    "body": "| strip_html"
+  },
+  "Filter - string | strip_newlines": {
+    "prefix": "strip_newlines",
+    "description": "Strips all newline characters (line breaks) from a string.",
+    "body": "| strip_newlines"
+  },
+  "Filter - string | truncate": {
+    "prefix": "truncate",
+    "description": "Truncates a string down to a given number of characters. If the specified number of characters is less than the length of the string, then an ellipsis (...) is appended to the truncated string. The ellipsis is included in the character count of the truncated string.",
+    "body": "| truncate: $1${2:, '$3'}"
+  },
+  "Filter - string | truncatewords": {
+    "prefix": "truncatewords",
+    "description": "Truncates a string down to a given number of words. If the specified number of words is less than the number of words in the string, then an ellipsis (...) is appended to the truncated string..",
+    "body": "| truncatewords: $1${2:, '$3'}"
+  },
+  "Filter - string | upcase": {
+    "prefix": "upcase",
+    "description": "Converts a string to all uppercase characters.",
+    "body": "| upcase"
+  },
+  "Filter - string | url_decode": {
+    "prefix": "url_decode",
+    "description": "Decodes any percent-encoded characters in a string.",
+    "body": "| url_decode"
+  },
+  "Filter - string | url_encode": {
+    "prefix": "url_encode",
+    "description": "Converts any URL-unsafe characters in a string to the percent-encoded equivalent.",
+    "body": "| url_encode"
+  },
+  "Filter - string | url_escape": {
+    "prefix": "url_escape",
+    "description": "Escapes any URL-unsafe characters in a string.",
+    "body": "| url_escape"
+  },
+  "Filter - string | url_param_escape": {
+    "prefix": "url_param_escape",
+    "description": "Escapes any characters in a string that are unsafe for URL parameters. The url_param_escape filter escapes the same characters as url_escape, with the addition of &.",
+    "body": "| url_param_escape"
+  }
+}

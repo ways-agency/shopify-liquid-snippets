@@ -3,10 +3,14 @@
     "datetime",
     "desaturate",
     "Desaturates",
+    "handleize",
     "iframe",
+    "lstrip",
     "metafield",
     "RGBA",
-    "shopify"
+    "rstrip",
+    "shopify",
+    "truncatewords"
   ],
   "npm-scripts.showStartNotification": false
 }
