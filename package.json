@@ -119,6 +119,10 @@
       {
         "language": "liquid",
         "path": "./snippets/tags/syntax.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/tags/theme.code-snippets"
       }
     ]
   }
