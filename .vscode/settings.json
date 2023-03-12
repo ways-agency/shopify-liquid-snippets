@@ -3,6 +3,8 @@
     "datetime",
     "desaturate",
     "Desaturates",
+    "endcase",
+    "endunless",
     "handleize",
     "iframe",
     "lstrip",
@@ -10,7 +12,8 @@
     "RGBA",
     "rstrip",
     "shopify",
-    "truncatewords"
+    "truncatewords",
+    "unlesselse"
   ],
   "npm-scripts.showStartNotification": false
 }

@@ -103,6 +103,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/tag.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/tags/conditional.code-snippets"
       }
     ]
   }
