@@ -1,0 +1,12 @@
+{
+  "Filter - localization | format_address": {
+    "prefix": "format_address",
+    "description": "Generates an HTML address display, with each address component ordered according to the address's locale.",
+    "body": "| format_address"
+  },
+  "Filter - localization | translate": {
+    "prefix": "translate",
+    "description": "Returns a string of translated text for a given translation key from a locale file. The translate filter has an alias of t, which is more commonly used.",
+    "body": "| t"
+  }
+}
