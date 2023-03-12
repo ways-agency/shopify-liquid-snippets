@@ -1,0 +1,57 @@
+{
+  "Filter - math | abs": {
+    "prefix": "abs",
+    "description": "Returns the absolute value of a number.",
+    "body": "| abs"
+  },
+  "Filter - math | at_least": {
+    "prefix": "at_least",
+    "description": "Limits a number to a minimum value.",
+    "body": "| at_least: ${1:number}"
+  },
+  "Filter - math | at_most": {
+    "prefix": "at_most",
+    "description": "Limits a number to a maximum value.",
+    "body": "| at_most: ${1:number}"
+  },
+  "Filter - math | ceil": {
+    "prefix": "ceil",
+    "description": "Rounds a number up to the nearest integer.",
+    "body": "| ceil"
+  },
+  "Filter - math | divided_by": {
+    "prefix": "divided_by",
+    "description": "Divides a number by a given number. The divided_by filter produces a result of the same type as the divisor. This means if you divide by an integer, the result will be an integer, and if you divide by a float, the result will be a float.",
+    "body": "| divided_by: ${1:number}"
+  },
+  "Filter - math | floor": {
+    "prefix": "floor",
+    "description": "Rounds a number down to the nearest integer.",
+    "body": "| floor"
+  },
+  "Filter - math | minus": {
+    "prefix": "minus",
+    "description": "Subtracts a given number from another number.",
+    "body": "| minus: ${1:number}"
+  },
+  "Filter - math | modulo": {
+    "prefix": "modulo",
+    "description": "Returns the remainder of dividing a number by a given number.",
+    "body": "| modulo: ${1:number}"
+  },
+  "Filter - math | plus": {
+    "prefix": "plus",
+    "description": "Adds two numbers.",
+    "body": "| plus: ${1:number}"
+  },
+  "Filter - math | round": {
+    "prefix": "round",
+    "description": "Rounds a number to the nearest integer. You can specify a number of decimal places to round to. If you don't specify a number, then the round filter rounds to the nearest integer.",
+    "body": "| round${1:: ${2:number}}"
+  },
+  "Filter - math | times": {
+    "prefix": "times",
+    "description": "Multiplies a number by a given number.",
+    "body": "| times: ${1:number}"
+  }
+}
