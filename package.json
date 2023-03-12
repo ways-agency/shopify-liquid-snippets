@@ -99,6 +99,10 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/string.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/filters/tag.code-snippets"
       }
     ]
   }
