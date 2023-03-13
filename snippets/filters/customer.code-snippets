@@ -1,20 +1,20 @@
 {
-    "Filter - customer | customer_login_link": {
+    "Filter - Customer | customer_login_link": {
         "prefix": "customer_login_link",
         "description": "Generates an HTML link to the customer login page.",
         "body": "| customer_login_link"
     },
-    "Filter - customer | customer_logout_link": {
+    "Filter - Customer | customer_logout_link": {
         "prefix": "customer_logout_link",
         "description": "Generates an HTML link to log the customer out of their account and redirect to the homepage.",
         "body": "| customer_logout_link"
     },
-    "Filter - customer | customer_register_link": {
+    "Filter - Customer | customer_register_link": {
         "prefix": "customer_register_link",
         "description": "Generates an HTML link to the customer registration page.",
         "body": "| customer_register_link"
     },
-    "Filter - customer | login_button": {
+    "Filter - Customer | login_button": {
         "prefix": "login_button",
         "description": "Generates an HTML Button that enables a customer to follow the Shop in the Shop App.",
         "body": "| login_button: action 'follow'"
