@@ -1,10 +1,10 @@
 {
-  "Filter - metafield | metafield_tag": {
+  "Filter - Metafield | metafield_tag": {
     "prefix": "metafield_tag",
     "description": "Generates an HTML element to host the metafield data. The type of element that's generated differs depending on the type of metafield.",
     "body": "| metafield_tag"
   },
-  "Filter - metafield | metafield_text": {
+  "Filter - Metafield | metafield_text": {
     "prefix": "metafield_text",
     "description": "Generates a text version of the metafield data.",
     "body": "| metafield_text"
