@@ -106,6 +106,18 @@
       },
       {
         "language": "liquid",
+        "path": "./snippets/schema/content.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/schema/input-settings.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/schema/sidebar-settings.code-snippets"
+      },
+      {
+        "language": "liquid",
         "path": "./snippets/tags/conditional.code-snippets"
       },
       {
