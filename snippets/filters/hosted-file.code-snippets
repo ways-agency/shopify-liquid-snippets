@@ -1,30 +1,30 @@
 {
-  "Filter - hosted file | asset_img_url": {
+  "Filter - Hosted File | asset_img_url": {
     "prefix": "asset_img_url",
     "description": "Wraps all instances of a specific string, within a given string, with an HTML <strong> tag with a class attribute of asset_img_url.",
-    "body": "| asset_img_url${1:: '${2:size}'}"
+    "body": "| asset_img_url${1:: '${0:size}'}"
   },
-  "Filter - hosted file | asset_url": {
+  "Filter - Hosted File | asset_url": {
     "prefix": "asset_url",
     "description": "Returns the CDN URL for a file in the assets directory of a theme.",
     "body": "| asset_url"
   },
-  "Filter - hosted file | file_img_url": {
+  "Filter - Hosted File | file_img_url": {
     "prefix": "file_img_url",
     "description": "Returns the CDN URL for an image from the Files page of the Shopify admin. By default, the file_img_url filter returns the small version of the image (100 x 100 px). However, you can specify a size.",
-    "body": "| file_img_url${1:: '${2:size}'}"
+    "body": "| file_img_url${1:: '${0:size}'}"
   },
-  "Filter - hosted file | file_url": {
+  "Filter - Hosted File | file_url": {
     "prefix": "file_url",
     "description": "Returns the CDN URL for a file from the Files page of the Shopify admin.",
     "body": "| file_url"
   },
-  "Filter - hosted file | global_asset_url": {
+  "Filter - Hosted File | global_asset_url": {
     "prefix": "global_asset_url",
     "description": "Returns the CDN URL for a global asset. Global assets are kept in a directory on Shopify's server. Using global assets can be faster than loading the resource directly. Depending on the resource type, you might need to use an additional filter to load the resource.",
     "body": "| global_asset_url"
   },
-  "Filter - hosted file | shopify_asset_url": {
+  "Filter - Hosted File | shopify_asset_url": {
     "prefix": "shopify_asset_url",
     "description": "Returns the CDN URL for a globally accessible Shopify asset. The following are the globally accessible Shopify assets: option_selection.js, api.jquery.js, shopify_common.js, customer_area.js, currencies.js, customer.css.",
     "body": "| shopify_asset_url"
