@@ -1,5 +1,5 @@
 {
-  "Tag - Input setting | _checkbox": {
+  "Schema - Input setting | _checkbox": {
     "prefix": "_checkbox",
     "description": "A setting of type checkbox outputs a checkbox field. These fields can be used for toggling features on and off, such as whether to show an announcement bar.",
     "body": [
@@ -11,7 +11,7 @@
       "}${4:,}"
     ]
   },
-  "Tag - Input setting | _number": {
+  "Schema - Input setting | _number": {
     "prefix": "_number",
     "description": "A setting of type number outputs a single number field.",
     "body": [
@@ -23,7 +23,7 @@
       "}${4:,}"
     ]
   },
-  "Tag - Input setting | _radio": {
+  "Schema - Input setting | _radio": {
     "prefix": "_radio",
     "description": "A setting of type radio outputs a radio option field. In addition to the standard attributes of an input setting, radio type settings have a required options attribute that accepts an array of value and label definitions.",
     "body": [
@@ -41,7 +41,7 @@
       "}${5:,}"
     ]
   },
-  "Tag - Input setting | _range": {
+  "Schema - Input setting | _range": {
     "prefix": "_range",
     "description": "A setting of type range outputs a range slider field.",
     "body": [
@@ -57,7 +57,7 @@
       "}${8:,}"
     ]
   },
-  "Tag - Input setting | _select": {
+  "Schema - Input setting | _select": {
     "prefix": "_select",
     "description": "A setting of type select outputs a drop-down selector field.",
     "body": [
@@ -75,7 +75,7 @@
       "}${5:,}"
     ]
   },
-  "Tag - Input setting | _text": {
+  "Schema - Input setting | _text": {
     "prefix": "_text",
     "description": "A setting of type text outputs a single-line text field.",
     "body": [
@@ -86,7 +86,7 @@
       "}${3:,}"
     ]
   },
-  "Tag - Input setting | _textarea": {
+  "Schema - Input setting | _textarea": {
     "prefix": "_textarea",
     "description": "A setting of type textarea outputs a multi-line text field.",
     "body": [
@@ -94,6 +94,224 @@
       "  \"type\": \"textarea\",",
       "  \"id\": \"$1\",",
       "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _article": {
+    "prefix": "_article",
+    "description": "A setting of type article outputs an article picker field that's automatically populated with the available articles for the store. You can use these fields to capture an article selection, such as the article to feature on the homepage.",
+    "body": [
+      "{",
+      "  \"type\": \"article\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _blog": {
+    "prefix": "_blog",
+    "description": "A setting of type blog outputs a blog picker field that's automatically populated with the available blogs for the store. You can use these fields to capture a blog selection, such as the blog to feature in the sidebar.",
+    "body": [
+      "{",
+      "  \"type\": \"blog\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _collection": {
+    "prefix": "_collection",
+    "description": "A setting of type collection outputs a collection picker field that's automatically populated with the available collections for the store. You can use these fields to capture a collection selection, such as a collection for featuring products on the homepage.",
+    "body": [
+      "{",
+      "  \"type\": \"collection\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _collection_list": {
+    "prefix": "_collection_list",
+    "description": "A setting of type collection_list outputs a collection picker field that's automatically populated with the available collections for the store. You can use these fields to capture multiple collections, such as a group of collections to feature on the homepage.",
+    "body": [
+      "{",
+      "  \"type\": \"collection_list\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "  \"limit\": $3",
+      "}${4:,}"
+    ]
+  },
+  "Schema - Input setting | _color ": {
+    "prefix": "_color ",
+    "description": "A setting of type color outputs a color picker field. You can use these fields to capture a color selection for various theme elements, such as the body text color.",
+    "body": [
+      "{",
+      "  \"type\": \"color \",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "  \"default\": \"${3:#000000}\"",
+      "}${4:,}"
+    ]
+  },
+  "Schema - Input setting | _color_background": {
+    "prefix": "_color_background",
+    "description": "A setting of type color_background outputs a text field for entering CSS background properties. You can use these fields to capture background settings for various theme elements, such as the store background.",
+    "body": [
+      "{",
+      "  \"type\": \"color_background\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "  \"default\": \"${3:#000000}\"",
+      "}${4:,}"
+    ]
+  },
+  "Schema - Input setting | _font_picker": {
+    "prefix": "_font_picker",
+    "description": "A setting of type font_picker outputs a font picker field that's automatically populated with fonts from the Shopify font library. This library includes web-safe fonts, a selection of Google Fonts, and fonts licensed by Monotype.",
+    "body": [
+      "{",
+      "  \"type\": \"font_picker\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "  \"default\": \"${3:helvetica_n4}\"",
+      "}${4:,}"
+    ]
+  },
+  "Schema - Input setting | _html": {
+    "prefix": "_html",
+    "description": "A setting of type html outputs a multi-line text field that accepts HTML markup.",
+    "body": [
+      "{",
+      "  \"type\": \"html\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _image_picker ": {
+    "prefix": "_image_picker ",
+    "description": "A setting of type image_picker outputs an image picker field that's automatically populated with the available images from the Files section of Shopify admin, and has the option to upload new images. Merchants also have an opportunity to enter alt text and select a focal point for their image.",
+    "body": [
+      "{",
+      "  \"type\": \"image_picker \",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _inline_richtext": {
+    "prefix": "_inline_richtext",
+    "description": "A setting of type inline_richtext outputs HTML markup that isn't wrapped in paragraph tags (<p>). The setting includes the following basic formatting options: Bold, Italic, Link.",
+    "body": [
+      "{",
+      "  \"type\": \"inline_richtext\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _link_list": {
+    "prefix": "_link_list",
+    "description": "A setting of type link_list outputs HTML markup that isn't wrapped in paragraph tags (<p>). The setting includes the following basic formatting options: Bold, Italic, Link.",
+    "body": [
+      "{",
+      "  \"type\": \"link_list\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _liquid": {
+    "prefix": "_liquid",
+    "description": "A setting of type liquid outputs HTML markup that isn't wrapped in paragraph tags (<p>). The setting includes the following basic formatting options: Bold, Italic, Link.",
+    "body": [
+      "{",
+      "  \"type\": \"liquid\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _page": {
+    "prefix": "_page",
+    "description": "A setting of type page outputs a page picker field that's automatically populated with the available pages for the store. You can use these fields to capture a page selection, such as the page to feature content for in a size-chart display.",
+    "body": [
+      "{",
+      "  \"type\": \"page\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _product": {
+    "prefix": "_product",
+    "description": "A setting of type product outputs a product picker field that's automatically populated with the available products for the store. You can use these fields to capture a product selection, such as the product to feature on the homepage.",
+    "body": [
+      "{",
+      "  \"type\": \"product\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _product_list": {
+    "prefix": "_product_list",
+    "description": "A setting of type product_list outputs a product_list picker field that's automatically populated with the available product_lists for the store. You can use these fields to capture a product_list selection, such as the product_list to feature on the homepage.",
+    "body": [
+      "{",
+      "  \"type\": \"product_list\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "  \"limit\": $3",
+      "}${4:,}"
+    ]
+  },
+  "Schema - Input setting | _richtext": {
+    "prefix": "_richtext",
+    "description": "A setting of type richtext outputs a multi-line text field with the following basic formatting options: Bold, Italic, Underline, Link, Paragraph, Unordered list.",
+    "body": [
+      "{",
+      "  \"type\": \"richtext\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _url": {
+    "prefix": "_url",
+    "description": "A setting of type url outputs a URL entry field where you can manually enter external URLs and relative paths. It also has a picker that's automatically populated with the following available resources for the shop: Articles, Blogs, Collections, Pages, Products.",
+    "body": [
+      "{",
+      "  \"type\": \"url\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _video": {
+    "prefix": "_video",
+    "description": "A setting of type video outputs a video picker that's automatically populated with the available videos from the Files section of the Shopify admin. The merchant also has the option to upload new videos.",
+    "body": [
+      "{",
+      "  \"type\": \"video\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Schema - Input setting | _video_url": {
+    "prefix": "_video_url",
+    "description": "A setting of type video_url outputs a video_url picker that's automatically populated with the available video_urls from the Files section of the Shopify admin. The merchant also has the option to upload new video_urls.",
+    "body": [
+      "{",
+      "  \"type\": \"video_url\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\",",
+      "  \"accept\": [",
+      "    \"youtube\",",
+      "    \"vimeo\"",
+      "  ]",
       "}${3:,}"
     ]
   },
