@@ -2,7 +2,7 @@
     "Filter - collection | highlight_active_tag": {
         "prefix": "highlight_active_tag",
         "description": "Wraps a given tag in an HTML <span> tag, with a class attribute of active, if the tag is currently active. Only applies to collection tags.",
-        "body": "| highlight_active_tag | link_to_tag: ${1:tag}"
+        "body": "| highlight_active_tag | link_to_tag: ${0:tag}"
     },
     "Filter - collection | link_to_type": {
         "prefix": "link_to_type",
@@ -17,7 +17,7 @@
     "Filter - collection | sort_by": {
         "prefix": "sort_by",
         "description": "Generates a collection URL with the provided sort_by parameter appended. This filter must be applied to a collection URL. Accepts the following values: manual, best-selling, title-ascending, title-descending, price-ascending, price-descending, created-ascending, created-descending",
-        "body": "| sort_by: '$1'"
+        "body": "| sort_by: '${1|manual,best-selling,title-ascending,title-descending,price-ascending,price-descending,created-ascending,created-descending|}'"
     },
     "Filter - collection | url_for_type": {
         "prefix": "url_for_type",
@@ -32,6 +32,6 @@
     "Filter - collection | within": {
         "prefix": "within",
         "description": "Generates a product URL within the context of the provided collection. When the collection context is included, you can access the associated collection object in the product template.",
-        "body": "| within: $1"
+        "body": "| within: ${1:collection}"
     },
 }

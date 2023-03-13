@@ -2,6 +2,6 @@
     "Filter - Cart | item_count_for_variant": {
         "prefix": "item_count_for_variant",
         "description": "Returns the total item count of a variant in the cart.",
-        "body": "| item_count_for_variant: $1"
+        "body": "| item_count_for_variant: $0"
     },
 }

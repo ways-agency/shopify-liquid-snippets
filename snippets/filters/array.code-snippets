@@ -7,7 +7,7 @@
     "Filter - Array | concat": {
         "prefix": "concat",
         "description": "Concatenates (combines) two arrays.",
-        "body": "| concat: ${1:array}"
+        "body": "| concat: ${0:array}"
     },
     "Filter - Array | first": {
         "prefix": "first",
@@ -17,7 +17,7 @@
     "Filter - Array | join": {
         "prefix": "join",
         "description": "Combines all of the items in an array into a single string, separated by a space.",
-        "body": "| join${1: '${2:,  }'}"
+        "body": "| join${1: '${0:,  }'}"
     },
     "Filter - Array | last": {
         "prefix": "last",
@@ -27,7 +27,7 @@
     "Filter - Array | map": {
         "prefix": "map",
         "description": "Creates an array of values from a specific property of the items in an array.",
-        "body": "| map: '$1'"
+        "body": "| map: '$0'"
     },
     "Filter - Array | reverse": {
         "prefix": "reverse",
@@ -42,12 +42,12 @@
     "Filter - Array | sort": {
         "prefix": "sort",
         "description": "Sorts the items in an array in case-sensitive alphabetical, or numerical, order. You can specify an array item property to sort the array items by.",
-        "body": "| sort${1:: '$2'}"
+        "body": "| sort${1:: '$0'}"
     },
     "Filter - Array | sort_natural": {
         "prefix": "sort_natural",
         "description": "Sorts the items in an array in case-insensitive alphabetical order.",
-        "body": "| sort_natural${1:: '$2'}"
+        "body": "| sort_natural${1:: '$0'}"
     },
     "Filter - Array | uniq": {
         "prefix": "uniq",
@@ -57,11 +57,11 @@
     "Filter - Array | where (string)": {
         "prefix": "where:string",
         "description": "Filters an array to include only items with a specific property value. This requires you to provide both the property name and the associated value.",
-        "body": "| where: '$1', '$2'"
+        "body": "| where: '$1', '$0'"
     },
     "Filter - Array | where (boolean)": {
         "prefix": "where:boolean",
         "description": "Filters an array to include only items with a specific property value. Filter for boolean properties with a `true` value",
-        "body": "| where: '$1'"
+        "body": "| where: '$0'"
     }
 }
