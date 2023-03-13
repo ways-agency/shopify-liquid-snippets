@@ -23,6 +23,16 @@
       "}${4:,}"
     ]
   },
+  "Schema - Input setting | _option": {
+    "prefix": "_option",
+    "description": "Option for radio and select inputs.",
+    "body": [
+      "{",
+      "  \"value\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
   "Schema - Input setting | _radio": {
     "prefix": "_radio",
     "description": "A setting of type radio outputs a radio option field. In addition to the standard attributes of an input setting, radio type settings have a required options attribute that accepts an array of value and label definitions.",
@@ -35,7 +45,8 @@
       "    {",
       "      \"value\": \"$3\",",
       "      \"label\": \"$4\"",
-      "    }",
+      "    },",
+      "    $0",
       "  ],",
       "  \"default\": \"$3\"",
       "}${5:,}"
@@ -69,7 +80,8 @@
       "    {",
       "      \"value\": \"$3\",",
       "      \"label\": \"$4\"",
-      "    }",
+      "    },",
+      "    $0",
       "  ],",
       "  \"default\": \"$3\"",
       "}${5:,}"
