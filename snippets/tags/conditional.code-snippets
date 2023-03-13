@@ -1,203 +1,154 @@
 {
-  "Tag - conditional | if": {
+  "Tag - Conditional | if": {
     "prefix": "if",
     "description": "Renders an expression if a specific condition is true.",
     "body": [
         "if ${1:condition}",
-        "  $2",
+        "\t$0",
         "endif"
     ]
   },
-  "Tag - conditional | {if}": {
+  "Tag - Conditional | {if}": {
     "prefix": "{if}",
     "description": "Renders an expression if a specific condition is true.",
     "body": [
-        "{% if ${1:condition} %}",
-        "  $2",
-        "{% endif %}"
+        "{%${1:-} if ${2:condition} $1%}",
+        "\t$0",
+        "{%$1 endif $1%}"
     ]
   },
-  "Tag - conditional | {if}-": {
-    "prefix": "{if}-",
-    "description": "Renders an expression if a specific condition is true.",
-    "body": [
-        "{%- if ${1:condition} -%}",
-        "  $2",
-        "{%- endif -%}"
-    ]
-  },
-  "Tag - conditional | elsif": {
+  "Tag - Conditional | elsif": {
     "prefix": "elsif",
     "description": "You can use the elsif tag to check for multiple conditions.",
-    "body": "elsif ${1:condition}"
+    "body": [
+      "elsif ${1:condition}",
+      "\t$0"
+  ]
   },
-  "Tag - conditional | {elsif}": {
+  "Tag - Conditional | {elsif}": {
     "prefix": "{elsif}",
     "description": "You can use the elsif tag to check for multiple conditions.",
-    "body": "{% elsif ${1:condition} %}"
+    "body": [
+      "{%${1:-} elsif ${2:condition} $1%}",
+      "\t$0"
+    ]
   },
-  "Tag - conditional | {elsif}-": {
-    "prefix": "{elsif}-",
-    "description": "You can use the elsif tag to check for multiple conditions.",
-    "body": "{%- elsif ${1:condition} -%}"
-  },
-  "Tag - conditional | else": {
+  "Tag - Conditional | else": {
     "prefix": "else",
     "description": "Allows you to specify a default expression to execute when no other condition is met or a for loop has zero length. You can use the else tag with the following tags: case, if, unless and for",
-    "body": "else"
-  },  
-  "Tag - conditional | {else}": {
+    "body": [
+      "else",
+      "\t$0",
+    ]
+  },
+  "Tag - Conditional | {else}": {
     "prefix": "{else}",
     "description": "Allows you to specify a default expression to execute when no other condition is met or a for loop has zero length. You can use the else tag with the following tags: case, if, unless and for",
-    "body": "{% else %}"
+    "body": [
+      "{%${1:-} else $1%}",
+      "\t$0",
+    ]
   },
-  "Tag - conditional | {else}-": {
-    "prefix": "{else}-",
-    "description": "Allows you to specify a default expression to execute when no other condition is met or a for loop has zero length. You can use the else tag with the following tags: case, if, unless and for",
-    "body": "{%- else -%}"
-  },
-  "Tag - conditional | unless": {
+  "Tag - Conditional | unless": {
     "prefix": "unless",
     "description": "Renders an expression unless a specific condition is true. Similar to the if tag, you can use elsif to add more conditions to an unless tag.",
     "body": [
         "unless ${1:condition}",
-        "  $2",
+        "\t$0",
         "endunless"
     ]
   },
-  "Tag - conditional | {unless}": {
+  "Tag - Conditional | {unless}": {
     "prefix": "{unless}",
     "description": "Renders an expression unless a specific condition is true. Similar to the if tag, you can use elsif to add more conditions to an unless tag.",
     "body": [
-        "{% unless ${1:condition} %}",
-        "  $2",
-        "{% endunless %}"
+        "{%${1:-} unless ${2:condition} $1%}",
+        "\t$0",
+        "{%$1 endunless $1%}"
     ]
   },
-  "Tag - conditional | {unless}-": {
-    "prefix": "{unless}-",
-    "description": "Renders an expression unless a specific condition is true. Similar to the if tag, you can use elsif to add more conditions to an unless tag.",
-    "body": [
-        "{%- unless ${1:condition} -%}",
-        "  $2",
-        "{%- endunless -%}"
-    ]
-  },
-  "Tag - conditional | ifelse": {
+  "Tag - Conditional | ifelse": {
     "prefix": "ifelse",
     "description": "Renders an expression if a specific condition is true and specify a default expression to execute when no other condition is met.",
     "body": [
         "if ${1:condition}",
-        "  $2",
+        "\t$2",
         "else",
-        "  $3",
+        "\t$0",
         "endif"
     ]
   },
-  "Tag - conditional | {ifelse}": {
+  "Tag - Conditional | {ifelse}": {
     "prefix": "{ifelse}",
     "description": "Renders an expression if a specific condition is true and specify a default expression to execute when no other condition is met.",
     "body": [
-        "{% if ${1:condition} %}",
-        "  $2",
-        "{% else %}",
-        "  $3",
-        "{% endif %}"
+        "{%${1:-} if ${2:condition} $1%}",
+        "\t$3",
+        "{%$1 else $1%}",
+        "\t$0",
+        "{%$1 endif $1%}"
     ]
   },
-  "Tag - conditional | {ifelse}-": {
-    "prefix": "{ifelse}-",
-    "description": "Renders an expression if a specific condition is true and specify a default expression to execute when no other condition is met.",
-    "body": [
-        "{%- if ${1:condition} -%}",
-        "  $2",
-        "{%- else -%}",
-        "  $3",
-        "{%- endif -%}"
-    ]
-  },
-  "Tag - conditional | unlesselse": {
+  "Tag - Conditional | unlesselse": {
     "prefix": "unlesselse",
     "description": "Renders an expression unless a specific condition is true and specify a default expression to execute when no other condition is met.",
     "body": [
         "unless ${1:condition}",
-        "  $2",
+        "\t$2",
         "else",
-        "  $3",
+        "\t$0",
         "endunless"
     ]
   },
-  "Tag - conditional | {unlesselse}": {
+  "Tag - Conditional | {unlesselse}": {
     "prefix": "{unlesselse}",
     "description": "Renders an expression unless a specific condition is true and specify a default expression to execute when no other condition is met.",
     "body": [
-        "{% unless ${1:condition} %}",
-        "  $2",
-        "{% else %}",
-        "  $3",
-        "{% endunless %}"
+        "{%${1:-} unless ${2:condition} $1%}",
+        "\t$3",
+        "{%$1 else $1%}",
+        "\t$0",
+        "{%$1 endunless $1%}"
     ]
   },
-  "Tag - conditional | {unlesselse}-": {
-    "prefix": "{unlesselse}-",
-    "description": "Renders an expression unless a specific condition is true and specify a default expression to execute when no other condition is met.",
-    "body": [
-        "{%- unless ${1:condition} -%}",
-        "  $2",
-        "{%- else -%}",
-        "  $3",
-        "{%- endunless -%}"
-    ]
-  },
-  "Tag - conditional | case": {
+  "Tag - Conditional | case": {
     "prefix": "case",
     "description": "Renders a specific expression depending on the value of a specific variable.",
     "body": [
         "case ${1:variable}",
-        "  when ${2:value}",
-        "      $3",
-        "  else",
-        "      $4",
-        "  endcase"
+        "\twhen ${2:value}",
+        "\t\t$3",
+        "\telse",
+        "\t\t$0",
+        "\tendcase"
     ]
   },
-  "Tag - conditional | {case}": {
+  "Tag - Conditional | {case}": {
     "prefix": "{case}",
     "description": "Renders a specific expression depending on the value of a specific variable.",
     "body": [
-        "{% case ${1:variable} %}",
-        "  {% when ${2:value} %}",
-        "      $3",
-        "  {% else %}",
-        "      $4",
-        "  {% endcase %}"
+        "{%${1:-} case ${2:variable} $1%}",
+        "\t{%$1 when ${3:value} $1%}",
+        "\t\t$4",
+        "\t{%$1 else $1%}",
+        "\t\t$0",
+        "\t{%$1 endcase $1%}"
     ]
   },
-  "Tag - conditional | {case}-": {
-    "prefix": "{case}-",
-    "description": "Renders a specific expression depending on the value of a specific variable.",
-    "body": [
-        "{%- case ${1:variable} -%}",
-        "  {%- when ${2:value} -%}",
-        "      $3",
-        "  {%- else -%}",
-        "      $4",
-        "  {%- endcase -%}"
-    ]
-  },
-  "Tag - conditional | when": {
+  "Tag - Conditional | when": {
     "prefix": "when",
     "description": "Add another value.",
-    "body": "when ${1:value}"
+    "body": [
+      "when ${1:value}",
+      "\t$0"
+    ]
   },
-  "Tag - conditional | {when}": {
+  "Tag - Conditional | {when}": {
     "prefix": "{when}",
     "description": "Add another value.",
-    "body": "{% when ${1:value} %}"
-  },
-  "Tag - conditional | {when}-": {
-    "prefix": "{when}-",
-    "description": "Add another value.",
-    "body": "{%- when ${1:value} -%}"
+    "body": [
+      "{%${1:-} when ${2:value} $1%}",
+      "\t$0"
+  ]
   },
 }
