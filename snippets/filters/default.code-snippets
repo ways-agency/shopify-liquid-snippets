@@ -1,15 +1,15 @@
 {
-  "Filter - default | default": {
+  "Filter - Default | default": {
     "prefix": "default",
     "description": "Sets a default value for any variable whose value is one of the following: empty, false, nil. By default, the default filter's value will be used in place of false values. You can use the allow_false parameter to allow variables to return false instead of the default value.",
-    "body": "| default: $1${2:, allow_false: true}"
+    "body": "| default: ${1:variable}${2:, allow_false: true}"
   },
-  "Filter - default | default_errors": {
+  "Filter - Default | default_errors": {
     "prefix": "default_errors",
     "description": "Generates default error messages for each possible value of form.errors.",
     "body": "| default_errors"
   },
-  "Filter - default | default_pagination": {
+  "Filter - Default | default_pagination": {
     "prefix": "default_pagination",
     "description": "Generates HTML for a set of links for paginated results. Must be applied to the paginate object.",
     "body": "| default_pagination"
