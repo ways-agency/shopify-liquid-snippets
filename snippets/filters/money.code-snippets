@@ -1,20 +1,20 @@
 {
-  "Filter - money | money": {
+  "Filter - Money | money": {
     "prefix": "money",
     "description": "Formats a given price based on the store's HTML without currency setting.",
     "body": "| money"
   },
-  "Filter - money | money_with_currency": {
+  "Filter - Money | money_with_currency": {
     "prefix": "money_with_currency",
     "description": "Formats a given price based on the store's HTML with currency setting.",
     "body": "| money_with_currency"
   },
-  "Filter - money | money_without_currency": {
+  "Filter - Money | money_without_currency": {
     "prefix": "money_without_currency",
     "description": "Formats a given price based on the store's HTML without currency setting, without the currency symbol.",
     "body": "| money_without_currency"
   },
-  "Filter - money | money_without_trailing_zeros": {
+  "Filter - Money | money_without_trailing_zeros": {
     "prefix": "money_without_trailing_zeros",
     "description": "Formats a given price based on the store's HTML without currency setting, excluding the decimal separator (either . or ,) and trailing zeros. If the price has a non-zero decimal value, then the output is the same as the money filter.",
     "body": "| money_without_trailing_zeros"
