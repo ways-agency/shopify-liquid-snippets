@@ -1,17 +1,17 @@
 {
-  "Filter - tag | link_to_add_tag": {
+  "Filter - Tag | link_to_add_tag": {
     "prefix": "link_to_add_tag",
     "description": "Generates an HTML <a> tag with an href attribute linking to the current blog or collection, filtered to show only articles or products that have a given tag, as well as any currently active tags.",
-    "body": "| link_to_add_tag: $1"
+    "body": "| link_to_add_tag: $0"
   },
-  "Filter - tag | link_to_remove_tag": {
+  "Filter - Tag | link_to_remove_tag": {
     "prefix": "link_to_remove_tag",
     "description": "Generates an HTML <a> tag with an href attribute linking to the current blog or collection, filtered to show only articles or products that have any currently active tags, except the provided tag.",
-    "body": "| link_to_remove_tag: $1"
+    "body": "| link_to_remove_tag: $0"
   },
-  "Filter - tag | link_to_tag": {
+  "Filter - Tag | link_to_tag": {
     "prefix": "link_to_tag",
     "description": "Generates an HTML <a> tag with an href attribute linking to the current blog or collection, filtered to show only articles or products that have a given tag.",
-    "body": "| link_to_tag: $1"
+    "body": "| link_to_tag: $0"
   }
 }
