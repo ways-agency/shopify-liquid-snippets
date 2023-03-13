@@ -1,47 +1,47 @@
 {
-  "Filter - html | highlight": {
+  "Filter - HTML | highlight": {
     "prefix": "highlight",
     "description": "Wraps all instances of a specific string, within a given string, with an HTML <strong> tag with a class attribute of highlight.",
-    "body": "| highlight: $1"
+    "body": "| highlight: ${0:string}"
   },
-  "Filter - html | link_to": {
+  "Filter - HTML | link_to": {
     "prefix": "link_to",
     "description": "Generates an HTML <a> tag.",
-    "body": "| link_to: '$1'${2:, ${3:attribute}: '$4'}"
+    "body": "| link_to: '$1'${2:, ${3:attribute}: '$0'}"
   },
-  "Filter - html | placeholder_svg_tag": {
+  "Filter - HTML | placeholder_svg_tag": {
     "prefix": "placeholder_svg_tag",
     "description": "Generates an HTML <svg> tag for a given placeholder name. Accepts the following placeholder names: collection-1, collection-2, collection-3, collection-4, collection-5, collection-6, image, lifestyle-1, lifestyle-2, product-1, product-2, product-3, product-4, product-5, product-6",
-    "body": "| placeholder_svg_tag${1:: '${2:class}'}"
+    "body": "| placeholder_svg_tag${1:: '${0:class}'}"
   },
-  "Filter - html | preload_tag": {
+  "Filter - HTML | preload_tag": {
     "prefix": "preload_tag",
     "description": "Generates an HTML <link> tag with a rel attribute of preload to prioritize loading a given Shopify-hosted asset. The asset URL is also added to the Link header with a rel attribute of preload. You should use this filter sparingly. For example, consider preloading only resources necessary for rendering above-the-fold content. To learn more about preloading resources, refer to Performance best practices for Shopify themes.",
-    "body": "| preload_tag: as: '$1'${2:, type: '$3'}"
+    "body": "| preload_tag: as: '$1'${2:, type: '$0'}"
   },
-  "Filter - html | script_tag": {
+  "Filter - HTML | script_tag": {
     "prefix": "script_tag",
     "description": "Generates an HTML <script> tag for a given resource URL. The tag has a type attribute of text/javascript.",
-    "body": "| script_tag: as: '$1'${2:, type: '$3'}"
+    "body": "| script_tag: as: '$1'${2:, type: '$0'}"
   },
-  "Filter - html | stylesheet_tag": {
+  "Filter - HTML | stylesheet_tag": {
     "prefix": "stylesheet_tag",
     "description": "Generates an HTML <link> tag for a given resource URL.",
-    "body": "| stylesheet_tag${1:: preload:${3:boolean}}"
+    "body": "| stylesheet_tag${1:: preload: true}"
   },
-  "Filter - html | time_tag": {
+  "Filter - HTML | time_tag": {
     "prefix": "time_tag",
     "description": "Converts a timestamp into an HTML <time> tag.",
-    "body": "| time_tag: '$1'"
+    "body": "| time_tag: '${0:%B %d, %Y}'"
   },
-  "Filter - html | time_tag (format)": {
+  "Filter - HTML | time_tag:format": {
     "prefix": "time_tag:format",
     "description": "Converts a timestamp into an HTML <time> tag. Specify a locale-aware date format. Accepts the following values: abbreviated_date, basic, date, date_at_time, default, on_date.",
-    "body": "| time_tag: format: '${1:abbreviated_date}'"
+    "body": "| time_tag: format: '${1|abbreviated_date,basic,date,date_at_time,default,on_date|}'"
   },
-  "Filter - html | time_tag (datetime)": {
+  "Filter - HTML | time_tag:datetime": {
     "prefix": "time_tag:datetime",
     "description": "Converts a timestamp into an HTML <time> tag. By default, the value of the datetime attribute of the <time> tag is formatted as YYYY-MM-DDThh:mm:ssTZD. However, you can specify a custom format with strftime shorthand formats",
-    "body": "| time_tag: '$1', datetime: '$2'"
+    "body": "| time_tag: '${1:%B %d, %Y}', datetime: '${0:%Y-%m-%d}'"
   }
 }
