@@ -123,6 +123,10 @@
       {
         "language": "liquid",
         "path": "./snippets/tags/theme.code-snippets"
+      },
+      {
+        "language": "liquid",
+        "path": "./snippets/tags/variable.code-snippets"
       }
     ]
   }
