@@ -1,0 +1,100 @@
+{
+  "Tag - Input setting | _checkbox": {
+    "prefix": "_checkbox",
+    "description": "A setting of type checkbox outputs a checkbox field. These fields can be used for toggling features on and off, such as whether to show an announcement bar.",
+    "body": [
+      "{",
+      "  \"type\": \"checkbox\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\",",
+      "  \"default\": ${3|true,false|}",
+      "}${4:,}"
+    ]
+  },
+  "Tag - Input setting | _number": {
+    "prefix": "_number",
+    "description": "A setting of type number outputs a single number field.",
+    "body": [
+      "{",
+      "  \"type\": \"number\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\",",
+      "  \"default\": $3",
+      "}${4:,}"
+    ]
+  },
+  "Tag - Input setting | _radio": {
+    "prefix": "_radio",
+    "description": "A setting of type radio outputs a radio option field. In addition to the standard attributes of an input setting, radio type settings have a required options attribute that accepts an array of value and label definitions.",
+    "body": [
+      "{",
+      "  \"type\": \"radio\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\",",
+      "  \"options\": [",
+      "    {",
+      "      \"value\": \"$3\",",
+      "      \"label\": \"$4\"",
+      "    }",
+      "  ],",
+      "  \"default\": \"$3\"",
+      "}${5:,}"
+    ]
+  },
+  "Tag - Input setting | _range": {
+    "prefix": "_range",
+    "description": "A setting of type range outputs a range slider field.",
+    "body": [
+      "{",
+      "  \"type\": \"range\",",
+      "  \"id\": \"$1\",",
+      "  \"min\": $2,",
+      "  \"max\": $3,",
+      "  \"step\": $4,",
+      "  \"unit\": \"$5\",",
+      "  \"label\": \"$6\",",
+      "  \"default\": $7",
+      "}${8:,}"
+    ]
+  },
+  "Tag - Input setting | _select": {
+    "prefix": "_select",
+    "description": "A setting of type select outputs a drop-down selector field.",
+    "body": [
+      "{",
+      "  \"type\": \"select\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\",",
+      "  \"options\": [",
+      "    {",
+      "      \"value\": \"$3\",",
+      "      \"label\": \"$4\"",
+      "    }",
+      "  ],",
+      "  \"default\": \"$3\"",
+      "}${5:,}"
+    ]
+  },
+  "Tag - Input setting | _text": {
+    "prefix": "_text",
+    "description": "A setting of type text outputs a single-line text field.",
+    "body": [
+      "{",
+      "  \"type\": \"text\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+  "Tag - Input setting | _textarea": {
+    "prefix": "_textarea",
+    "description": "A setting of type textarea outputs a multi-line text field.",
+    "body": [
+      "{",
+      "  \"type\": \"textarea\",",
+      "  \"id\": \"$1\",",
+      "  \"label\": \"$2\"",
+      "}${3:,}"
+    ]
+  },
+}
