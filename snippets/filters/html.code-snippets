@@ -34,12 +34,12 @@
     "description": "Converts a timestamp into an HTML <time> tag.",
     "body": "| time_tag: '${0:%B %d, %Y}'"
   },
-  "Filter - HTML | time_tag:format": {
+  "Filter - HTML | time_tag (format)": {
     "prefix": "time_tag:format",
     "description": "Converts a timestamp into an HTML <time> tag. Specify a locale-aware date format. Accepts the following values: abbreviated_date, basic, date, date_at_time, default, on_date.",
     "body": "| time_tag: format: '${1|abbreviated_date,basic,date,date_at_time,default,on_date|}'"
   },
-  "Filter - HTML | time_tag:datetime": {
+  "Filter - HTML | time_tag (datetime)": {
     "prefix": "time_tag:datetime",
     "description": "Converts a timestamp into an HTML <time> tag. By default, the value of the datetime attribute of the <time> tag is formatted as YYYY-MM-DDThh:mm:ssTZD. However, you can specify a custom format with strftime shorthand formats",
     "body": "| time_tag: '${1:%B %d, %Y}', datetime: '${0:%Y-%m-%d}'"
