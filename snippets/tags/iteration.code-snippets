@@ -1,6 +1,6 @@
 {
-  "Tag - Iteration | for": {
-    "prefix": "for",
+  "Tag - Iteration | .for": {
+    "prefix": ".for",
     "description": "Renders an expression for every item in an array. You can do a maximum of 50 iterations with a for loop. If you need to iterate over more than 50 items, then use the paginate tag to split the items over multiple pages.",
     "body": [
         "for ${1:variable} in ${2:array}${3:${4: reversed}${5: limit: ${6:number}}${7: offset: ${8:number}}}",
@@ -8,8 +8,8 @@
         "endfor"
     ]
   },
-  "Tag - Iteration | for%}": {
-    "prefix": "for%}",
+  "Tag - Iteration | for": {
+    "prefix": "for",
     "description": "Renders an expression for every item in an array. You can do a maximum of 50 iterations with a for loop. If you need to iterate over more than 50 items, then use the paginate tag to split the items over multiple pages.",
     "body": [
         "{%- for ${1:variable} in ${2:array}${3:${4: reversed}${5: limit: ${6:number}}${7: offset: ${8:number}}} -%}",
@@ -17,38 +17,38 @@
         "{%- endfor -%}"
     ]
   },
-  "Tag - Iteration | break": {
-    "prefix": "break",
+  "Tag - Iteration | .break": {
+    "prefix": ".break",
     "description": "Stops a for loop from iterating.",
     "body": "break"
   },
-  "Tag - Iteration | break%}": {
-    "prefix": "break%}",
+  "Tag - Iteration | break": {
+    "prefix": "break",
     "description": "Stops a for loop from iterating.",
     "body": "{%- break -%}"
+  },
+  "Tag - Iteration | .continue": {
+    "prefix": ".continue",
+    "description": "Causes a for loop to skip to the next iteration.",
+    "body": "continue"
   },
   "Tag - Iteration | continue": {
     "prefix": "continue",
     "description": "Causes a for loop to skip to the next iteration.",
-    "body": "continue"
-  },
-  "Tag - Iteration | continue%}": {
-    "prefix": "continue%}",
-    "description": "Causes a for loop to skip to the next iteration.",
     "body": "{%- continue -%}"
+  },
+  "Tag - Iteration | .cycle": {
+    "prefix": ".cycle",
+    "description": "Loops through a group of strings and outputs them one at a time for each iteration of a for loop. The cycle tag must be used inside a for loop.",
+    "body": "cycle ${1:'${2:group}': }'$3', '$4"
   },
   "Tag - Iteration | cycle": {
     "prefix": "cycle",
     "description": "Loops through a group of strings and outputs them one at a time for each iteration of a for loop. The cycle tag must be used inside a for loop.",
-    "body": "cycle ${1:'${2:group}': }'$3', '$4"
-  },
-  "Tag - Iteration | cycle%}": {
-    "prefix": "cycle%}",
-    "description": "Loops through a group of strings and outputs them one at a time for each iteration of a for loop. The cycle tag must be used inside a for loop.",
     "body": "{%- cycle ${1:'${2:group}': }'$3', '$4' -%}"
   },
-  "Tag - Iteration | tablerow%}": {
-    "prefix": "tablerow%}",
+  "Tag - Iteration | tablerow": {
+    "prefix": "tablerow",
     "description": "Generates HTML table rows for every item in an array. The tablerow tag must be wrapped in HTML <table> and </table> tags.",
     "body": [
         "{%- tablerow ${1:variable} in ${2:array}${3:${4: cols: ${5:number}}${6: limit: ${7:number}}${8: offset: ${9:number}}} -%}",
@@ -56,8 +56,8 @@
         "{%- endtablerow -%}"
     ]
   },
-  "Tag - Iteration | paginate%}": {
-    "prefix": "paginate%}",
+  "Tag - Iteration | paginate": {
+    "prefix": "paginate",
     "description": "Splits an array's items across multiple pages. Because for loops are limited to 50 iterations per page, you need to use the paginate tag to iterate over an array that has more than 50 items.",
     "body": [
         "{%- paginate ${1:array} by ${2:page_size}${3:, window_size: '$4'} -%}",

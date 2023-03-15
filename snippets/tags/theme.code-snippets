@@ -1,6 +1,6 @@
 {
-  "Tag - Theme | javascript%}": {
-    "prefix": "javascript%}",
+  "Tag - Theme | javascript": {
+    "prefix": "javascript",
     "description": "JavaScript code included in a section file. You need to use these tags only if your section or app block is meant to be installed on multiple themes or stores. Otherwise, you should include the JavaScript that your section needs in your theme's assets directory. Each section or app block can have only one {% javascript %} tag.",
     "body": [
         "{%- javascript -%}",
@@ -8,48 +8,48 @@
         "{%- endjavascript -%}"
     ]
   },
-  "Tag - Theme | layout%}": {
-    "prefix": "layout%}",
+  "Tag - Theme | layout": {
+    "prefix": "layout",
     "description": "Specify which layout to use.",
     "body": "{%- layout '$1' -%}"
   },
-  "Tag - Theme | layout:none%}": {
-    "prefix": "layout:none%}",
+  "Tag - Theme | layout:none": {
+    "prefix": "layout:none",
     "description": "Set layout to none.",
     "body": "{%- layout none -%}"
+  },
+  "Tag - Theme | .render": {
+    "prefix": ".render",
+    "description": "Renders a snippet or app block.",
+    "body": "render '$1'${2:, ${3:variable}: ${4:value}}"
   },
   "Tag - Theme | render": {
     "prefix": "render",
     "description": "Renders a snippet or app block.",
-    "body": "render '$1'${2:, ${3:variable}: ${4:value}}"
-  },
-  "Tag - Theme | render%}": {
-    "prefix": "render%}",
-    "description": "Renders a snippet or app block.",
     "body": "{%- render '$1'${2:, ${3:variable}: ${0:value}} -%}"
+  },
+  "Tag - Theme | .render:for": {
+    "prefix": ".render:for",
+    "description": "Renders a snippet or app block.",
+    "body": "render '$1' for ${2:array}${3: as ${4:item}}${5:, ${6:variable}: ${7:value}}"
   },
   "Tag - Theme | render:for": {
     "prefix": "render:for",
     "description": "Renders a snippet or app block.",
-    "body": "render '$1' for ${2:array}${3: as ${4:item}}${5:, ${6:variable}: ${7:value}}"
-  },
-  "Tag - Theme | render:for%}": {
-    "prefix": "render:for%}",
-    "description": "Renders a snippet or app block.",
     "body": "{%- render '$1' for ${2:array}${3: as ${4:item}}${5:, ${6:variable}: ${0:value}} -%}"
+  },
+  "Tag - Theme | .section": {
+    "prefix": ".section",
+    "description": "Renders a section. Rendering a section with the section tag renders a section statically. To learn more about sections and how to use them in your theme, refer to Render a section.",
+    "body": "section '${1:name}'"
   },
   "Tag - Theme | section": {
     "prefix": "section",
     "description": "Renders a section. Rendering a section with the section tag renders a section statically. To learn more about sections and how to use them in your theme, refer to Render a section.",
-    "body": "section '${1:name}'"
-  },
-  "Tag - Theme | section%}": {
-    "prefix": "section%}",
-    "description": "Renders a section. Rendering a section with the section tag renders a section statically. To learn more about sections and how to use them in your theme, refer to Render a section.",
     "body": "{%- section '${1:name}' -%}"
   },
-  "Tag - Theme | stylesheet%}": {
-    "prefix": "stylesheet%}",
+  "Tag - Theme | stylesheet": {
+    "prefix": "stylesheet",
     "description": "CSS styles included in a section file. You need to use these tags only if your section or app block is meant to be installed on multiple themes or stores. Otherwise, you should include the CSS styles that your section needs in your theme's assets directory. Each section or app block can have only one {% stylesheet %} tag.",
     "body": [
         "{%- stylesheet -%}",

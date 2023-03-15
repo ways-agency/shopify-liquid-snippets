@@ -1,6 +1,6 @@
 {
-  "Tag - Schema | schema%}": {
-    "prefix": "schema%}",
+  "Tag - Schema | schema": {
+    "prefix": "schema",
     "description": "This tag allows you to define various attributes of a section, such as the section name, any section blocks, and settings to allow for theme editor customization options.",
     "body": [
       "{% schema %}",
