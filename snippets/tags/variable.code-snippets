@@ -7,7 +7,7 @@
   "Tag - Variable | assign%}": {
     "prefix": "assign%}",
     "description": "Creates a new variable. You can create variables of any basic type, object, or object property.",
-    "body": "{%${1:-} assign ${2:variable_name} = ${3:value} $1%}"
+    "body": "{%- assign ${2:variable_name} = ${3:value} -%}"
   },
   "Tag - Variable | capture": {
     "prefix": "capture",
@@ -22,9 +22,9 @@
     "prefix": "capture%}",
     "description": "Creates a new variable with a string value. You can create complex strings with Liquid logic and variables.",
     "body": [
-      "{%${1:-} capture ${2:variable} $1%}",
+      "{%- capture ${2:variable} -%}",
       "  $0",
-      "{%$1 endcapture $1%}",
+      "{%- endcapture -%}",
     ]
   },
   "Tag - Variable | decrement": {
@@ -35,7 +35,7 @@
   "Tag - Variable | decrement%}": {
     "prefix": "decrement%}",
     "description": "Creates a new variable, with a default value of -1, that's decreased by 1 with each subsequent call.",
-    "body": "{%${1:-} decrement ${2:variable} $1%}"
+    "body": "{%- decrement ${2:variable} -%}"
   },
   "Tag - Variable | increment": {
     "prefix": "increment",
@@ -45,6 +45,6 @@
   "Tag - Variable | increment%}": {
     "prefix": "increment%}",
     "description": "Creates a new variable, with a default value of 0, that's increased by 1 with each subsequent call.",
-    "body": "{%${1:-} increment ${2:variable} $1%}"
+    "body": "{%- increment ${2:variable} -%}"
   },
 }

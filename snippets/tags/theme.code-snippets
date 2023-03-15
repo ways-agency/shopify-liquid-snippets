@@ -26,7 +26,7 @@
   "Tag - Theme | render%}": {
     "prefix": "render%}",
     "description": "Renders a snippet or app block.",
-    "body": "{%${1:-} render '$2'${3:, ${4:variable}: ${0:value}} $1%}"
+    "body": "{%- render '$2'${3:, ${4:variable}: ${0:value}} -%}"
   },
   "Tag - Theme | render:for": {
     "prefix": "render:for",
@@ -36,7 +36,7 @@
   "Tag - Theme | render:for%}": {
     "prefix": "render:for%}",
     "description": "Renders a snippet or app block.",
-    "body": "{%${1:-} render '$2' for ${3:array}${4: as ${5:item}}${6:, ${7:variable}: ${0:value}} $1%}"
+    "body": "{%- render '$2' for ${3:array}${4: as ${5:item}}${6:, ${7:variable}: ${0:value}} -%}"
   },
   "Tag - Theme | section": {
     "prefix": "section",

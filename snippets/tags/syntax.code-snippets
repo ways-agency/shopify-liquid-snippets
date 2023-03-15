@@ -16,7 +16,7 @@
   "Tag - Syntax | echo%}": {
     "prefix": "echo%}",
     "description": "Outputs an expression. Using the echo tag is the same as wrapping an expression in curly brackets ({{ and }}). However, unlike the curly bracket method, you can use the echo tag inside liquid tags.",
-    "body": "{%${1:-} echo ${0:expression} $1%}"
+    "body": "{%- echo ${0:expression} -%}"
   },
   "Tag - Syntax | raw": {
     "prefix": "raw",
@@ -31,18 +31,18 @@
     "prefix": "liquid%}",
     "description": "Allows you to have a block of Liquid without delimeters on each tag. Because the tags don't have delimeters, each tag needs to be on its own line.",
     "body": [
-        "{%${1:-} liquid",
+        "{%- liquid",
         "  $0",
-        "$1%}"
+        "-%}"
     ]
   },
   "Tag - Syntax | raw%}": {
     "prefix": "raw%}",
     "description": "Outputs any Liquid code as text instead of rendering it.",
     "body": [
-        "{%${1:-} raw $1%}",
+        "{%- raw -%}",
         "  $0",
-        "{%$1 endraw $1%}"
+        "{%- endraw -%}"
     ]
   },
 }
