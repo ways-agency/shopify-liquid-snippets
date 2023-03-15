@@ -27,6 +27,15 @@
         "endraw"
     ]
   },
+  "Tag - Syntax | liquid%}": {
+    "prefix": "liquid%}",
+    "description": "Allows you to have a block of Liquid without delimeters on each tag. Because the tags don't have delimeters, each tag needs to be on its own line.",
+    "body": [
+        "{%${1:-} liquid",
+        "  $0",
+        "$1%}"
+    ]
+  },
   "Tag - Syntax | raw%}": {
     "prefix": "raw%}",
     "description": "Outputs any Liquid code as text instead of rendering it.",
