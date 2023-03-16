@@ -7,30 +7,83 @@ const recommendedExtensions = [
   }
 ];
 
-const notRecommendedExtensions = []
+const notRecommendedExtensions = [
+  {
+    id: 'sissel.shopify-liquid',
+    name: 'Liquid'
+  },
+  {
+    id: 'neilding.language-liquid',
+    name: 'Liquid Languages Support'
+  },
+  {
+    id: 'killalau.vscode-liquid-snippets',
+    name: 'Shopify Liquid Template Snippets'
+  }
+]
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	console.log('Congratulations, your extension "test" is now active!');
+  let message = 'The following extensions are recommended for this extension:\n\n';
 
-	vscode.window.showInformationMessage('Niceeeee!');
+  recommendedExtensions.forEach(({id, name}) => {
+    const extension = vscode.extensions.getExtension(id);
 
-  console.log('Extension is now active.');
+    console.log(extension);
 
-  // Check if each recommended extension is installed
-  for (const extension of recommendedExtensions) {
-    const extensionExists = vscode.extensions.all.some(e => e.id === extension.id);
+    if (!extension) {
+      message += `- ${name}\n`;
+    }
+  });
 
-    if (!extensionExists) {
-      // Prompt the user to install the recommended extension
-      vscode.window.showInformationMessage(`The ${extension.name} extension is recommended for this extension. Do you want to install it now?`, 'Yes', 'No').then(install => {
-        if (install === 'Yes') {
-          vscode.commands.executeCommand('workbench.extensions.installExtension', extension.id);
+  if (message !== 'The following extensions are recommended for this extension:\n\n') {
+    message += 'Do you want to install them now?';
+    vscode.window.showInformationMessage(message, {modal: true}, 'Yes', 'No')
+    .then(install => {
+      if (install === 'Yes') {
+        recommendedExtensions.forEach(({id}) => {
+          vscode.commands.executeCommand('workbench.extensions.installExtension', id);
+        });
+      }
+      vscode.window.showInformationMessage('Extensions installed successfully. Please reload the editor for changes to take effect.', 'Reload')
+      .then(reload => {
+        if (reload === 'Reload') {
+          vscode.commands.executeCommand('workbench.action.reloadWindow');
         }
       });
+    });
+  }
+
+  message = 'The following extensions are not recommended for this extension:\n\n';
+
+  notRecommendedExtensions.forEach(({id, name}) => {
+    const extension = vscode.extensions.getExtension(id);
+
+    console.log(extension);
+
+    if (extension) {
+      message += `- ${name}\n`;
     }
+  });
+
+  if (message !== 'The following extensions are not recommended for this extension:\n\n') {
+    message += 'Do you want to uninstall them now?';
+    vscode.window.showWarningMessage(message, {modal: true}, 'Yes', 'No')
+    .then(uninstall => {
+      if (uninstall === 'Yes') {
+        notRecommendedExtensions.forEach(({id}) => {
+          vscode.commands.executeCommand('workbench.extensions.uninstallExtension', id);
+        });
+      }
+      vscode.window.showInformationMessage('Extensions uninstalled successfully. Please reload the editor for changes to take effect.', 'Reload')
+      .then(reload => {
+        if (reload === 'Reload') {
+          vscode.commands.executeCommand('workbench.action.reloadWindow');
+        }
+      });
+    });
   }
 }
 
