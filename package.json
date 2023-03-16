@@ -13,6 +13,9 @@
     "type": "git",
     "url": "https://github.com/ways-agency/shopify-liquid-snippets.git"
   },
+  "sponsor": {
+    "url": "https://opencollective.com/shopify-liquid-snippets"
+  },
   "bugs": {
     "url": "https://github.com/ways-agency/shopify-liquid-snippets/issues"
   },
@@ -24,7 +27,7 @@
   ],
   "main": "extension.js",
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^1.72.0"
   },
   "categories": [
     "Snippets"

@@ -1,24 +1,36 @@
+![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/backers/badge.svg?style=flat-square) ![Sponsors on Open Collective](https://opencollective.com/shopify-liquid-snippets/sponsors/badge.svg?style=flat-square)
+
 # Shopify Liquid Snippets for Visual Studio Code
 
 This extension is inspired by [Shopify Liquid Template Snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets) from [Franky Lau](https://marketplace.visualstudio.com/publishers/killalau).
 
-If you enjoy using this extension, buy me a 🍺
+## Sponsors
+
+If you enjoy using this extension, buy us a ☕ or ☕☕
+
+![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/badge.svg?style=flat-square)
 
 ## Features
 
-- `{%- liquid -%}` support;
+- `{%- liquid -%}` support
 - Latest Filters
 - Latest Schema settings
 - Latest Tags
-- Predefined Shopify values (Choise lists)
+- Predefined Shopify values (Choice lists)
 
-## Demo
+<!-- ## Demo
 
-Insert gif or link to demo
+Insert gif or link to demo -->
 
 ## Requirements
 
-- [Shopify Liquid](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension
+- [Shopify Liquid](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode)
+
+## Extensions to be uninstalled
+
+- [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
+- [Liquid Languages Support](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
+- [Shopify Liquid Template Snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets)
 
 ## Emmet
 
@@ -70,4 +82,4 @@ Add the following
 
 ## Feedback
 
-If you have any feedback, please reach out to us at info@waysagency.com
+If you have any feedback, please reach out to us at fake@fake.com
