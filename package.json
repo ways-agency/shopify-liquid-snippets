@@ -2,8 +2,8 @@
   "name": "shopify-liquid-snippets",
   "displayName": "Shopify Liquid Snippets",
   "description": "Shopify Liquid snippets",
-  "version": "0.0.1",
-  "publisher": "Ways Agency",
+  "version": "1.0.0",
+  "publisher": "ways-agency",
   "icon": "assets/images/shopify-liquid-snippets-logo.png",
   "preview": true,
   "scripts": {
