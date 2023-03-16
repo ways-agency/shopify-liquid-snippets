@@ -1,14 +1,20 @@
-![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/backers/badge.svg?style=flat-square) ![Sponsors on Open Collective](https://opencollective.com/shopify-liquid-snippets/sponsors/badge.svg?style=flat-square)
+<div align="center">
+  <img src="assets/images/shopify-liquid-snippets-logo.png" />
 
-# Shopify Liquid Snippets for Visual Studio Code
+  <h1>Shopify Liquid Snippets for Visual Studio Code</h1>
 
-This extension is inspired by [Shopify Liquid Template Snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets) from [Franky Lau](https://marketplace.visualstudio.com/publishers/killalau).
+  <p>A simple but powerful extension to write Liquid in a fast and efficient way.</p>
+</div>
 
-## Sponsors
+![demo](assets/gifs/shopify-liquid-snippets-demo.gif)
+
+<!-- ## Sponsors
 
 If you enjoy using this extension, buy us a ☕ or ☕☕
 
 ![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/badge.svg?style=flat-square)
+
+![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/backers/badge.svg?style=flat-square) ![Sponsors on Open Collective](https://opencollective.com/shopify-liquid-snippets/sponsors/badge.svg?style=flat-square) -->
 
 ## Features
 
@@ -17,10 +23,6 @@ If you enjoy using this extension, buy us a ☕ or ☕☕
 - Latest Schema settings
 - Latest Tags
 - Predefined Shopify values (Choice lists)
-
-<!-- ## Demo
-
-Insert gif or link to demo -->
 
 ## Requirements
 
@@ -79,7 +81,3 @@ Add the following
   - Syntax
   - Theme
   - Variable
-
-## Feedback
-
-If you have any feedback, please reach out to us at fake@fake.com
