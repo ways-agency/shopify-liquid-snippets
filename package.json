@@ -4,7 +4,7 @@
   "description": "Shopify Liquid snippets",
   "version": "0.0.1",
   "publisher": "Ways Agency",
-  "icon": "images/shopify-liquid-snippets-logo.png",
+  "icon": "assets/images/shopify-liquid-snippets-logo.png",
   "preview": true,
   "scripts": {
     "package": "vsce package"
