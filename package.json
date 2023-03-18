@@ -126,27 +126,7 @@
       },
       {
         "language": "liquid",
-        "path": "./snippets/tags/conditional.code-snippets"
-      },
-      {
-        "language": "liquid",
         "path": "./snippets/tags/html.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/tags/iteration.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/tags/syntax.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/tags/theme.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/tags/variable.code-snippets"
       }
     ]
   }

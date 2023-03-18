@@ -2,25 +2,25 @@
 	"Tag - Variable | assign": {
 		"prefix": "assign",
 		"description": "Creates a new variable. You can create variables of any basic type, object, or object property.",
-		"body": "{%- assign ${1:variable_name} = ${2:value} -%}"
+		"body": "assign ${1:variable_name} = ${2:value}"
 	},
 	"Tag - Variable | capture": {
 		"prefix": "capture",
 		"description": "Creates a new variable with a string value. You can create complex strings with Liquid logic and variables.",
 		"body": [
-			"{%- capture ${1:variable} -%}",
+			"capture ${1:variable}",
 			"  $0",
-			"{%- endcapture -%}"
+			"endcapture"
 		]
 	},
 	"Tag - Variable | decrement": {
 		"prefix": "decrement",
 		"description": "Creates a new variable, with a default value of -1, that's decreased by 1 with each subsequent call.",
-		"body": "{%- decrement ${1:variable} -%}"
+		"body": "decrement ${1:variable}"
 	},
 	"Tag - Variable | increment": {
 		"prefix": "increment",
 		"description": "Creates a new variable, with a default value of 0, that's increased by 1 with each subsequent call.",
-		"body": "{%- increment ${1:variable} -%}"
+		"body": "increment ${1:variable}"
 	}
 }

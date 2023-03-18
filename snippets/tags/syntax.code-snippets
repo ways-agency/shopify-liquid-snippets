@@ -8,24 +8,10 @@
         "{%- endcomment -%}"
     ]
   },
-  "Tag - Syntax | /echo": {
-    "prefix": "/echo",
-    "description": "Outputs an expression. Using the echo tag is the same as wrapping an expression in curly brackets ({{ and }}). However, unlike the curly bracket method, you can use the echo tag inside liquid tags.",
-    "body": "echo ${0:expression}"
-  },
   "Tag - Syntax | echo": {
     "prefix": "echo",
     "description": "Outputs an expression. Using the echo tag is the same as wrapping an expression in curly brackets ({{ and }}). However, unlike the curly bracket method, you can use the echo tag inside liquid tags.",
     "body": "{%- echo ${0:expression} -%}"
-  },
-  "Tag - Syntax | /raw": {
-    "prefix": "/raw",
-    "description": "Outputs any Liquid code as text instead of rendering it.",
-    "body": [
-        "raw",
-        "  $0",
-        "endraw"
-    ]
   },
   "Tag - Syntax | raw": {
     "prefix": "raw",
@@ -44,5 +30,5 @@
         "  $0",
         "-%}"
     ]
-  },
+  }
 }
