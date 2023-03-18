@@ -31,8 +31,6 @@ function activate(context) {
   recommendedExtensions.forEach(({id, name}) => {
     const extension = vscode.extensions.getExtension(id);
 
-    console.log(extension);
-
     if (!extension) {
       message += `- ${name}\n`;
     }
@@ -60,8 +58,6 @@ function activate(context) {
 
   notRecommendedExtensions.forEach(({id, name}) => {
     const extension = vscode.extensions.getExtension(id);
-
-    console.log(extension);
 
     if (extension) {
       message += `- ${name}\n`;
