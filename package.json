@@ -33,6 +33,9 @@
   "categories": [
     "Snippets"
   ],
+  "extensionDependencies": [
+    "Shopify.theme-check-vscode"
+  ],
   "keywords": [
     "shopify",
     "liquid",
