@@ -27,6 +27,7 @@
     "stylesheet",
     "tablerow",
     "truncatewords",
+    "undelimited",
     "unlesselse"
   ],
   "npm-scripts.showStartNotification": false
