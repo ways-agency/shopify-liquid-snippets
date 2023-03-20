@@ -6,7 +6,7 @@
   <p>A simple but powerful extension to write Liquid in a fast and efficient way.</p>
 </div>
 
-![demo](assets/gifs/shopify-liquid-snippets-demo.gif)
+![demo](assets/gifs/demo.gif)
 
 <!-- ## Sponsors
 
