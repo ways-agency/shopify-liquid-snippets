@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "buymeacoffee",
     "datetime",
     "delimeters",
     "desaturate",
@@ -28,7 +29,8 @@
     "tablerow",
     "truncatewords",
     "undelimited",
-    "unlesselse"
+    "unlesselse",
+    "waysagency"
   ],
   "npm-scripts.showStartNotification": false
 }

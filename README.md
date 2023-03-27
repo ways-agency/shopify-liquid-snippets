@@ -8,13 +8,11 @@
 
 ![demo](assets/gifs/demo.gif)
 
-<!-- ## Sponsors
+## Sponsors
 
-If you enjoy using this extension, buy us a ☕ or ☕☕
+If you enjoy using this extension
 
-![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/badge.svg?style=flat-square)
-
-![Backers on Open Collective](https://opencollective.com/shopify-liquid-snippets/backers/badge.svg?style=flat-square) ![Sponsors on Open Collective](https://opencollective.com/shopify-liquid-snippets/sponsors/badge.svg?style=flat-square) -->
+<a href="https://www.buymeacoffee.com/waysagency" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Features
 
@@ -81,3 +79,8 @@ Add the following
   - Syntax
   - Theme
   - Variable
+
+## Plans
+
+- Only suggest schema settings inside schema tag
+- Add markdown documentation with links to the official Shopify docs
