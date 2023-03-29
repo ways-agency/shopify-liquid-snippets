@@ -201,12 +201,12 @@
       "}${3:,}"
     ]
   },
-  "Schema - Input setting | _image_picker ": {
-    "prefix": "_image_picker ",
+  "Schema - Input setting | _image_picker": {
+    "prefix": "_image_picker",
     "description": "A setting of type image_picker outputs an image picker field that's automatically populated with the available images from the Files section of Shopify admin, and has the option to upload new images. Merchants also have an opportunity to enter alt text and select a focal point for their image.",
     "body": [
       "{",
-      "  \"type\": \"image_picker \",",
+      "  \"type\": \"image_picker\",",
       "  \"id\": \"$1\",",
       "  \"label\": \"$2\"",
       "}${3:,}"
