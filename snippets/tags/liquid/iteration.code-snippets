@@ -3,9 +3,9 @@
     "prefix": "for",
     "description": "Renders an expression for every item in an array. You can do a maximum of 50 iterations with a for loop. If you need to iterate over more than 50 items, then use the paginate tag to split the items over multiple pages.",
     "body": [
-        "for ${1:variable} in ${2:array}${3:${4: reversed}${5: limit: ${6:number}}${7: offset: ${8:number}}}",
-        "  $0",
-        "endfor"
+      "for ${1:variable} in ${2:array}${3:${4: reversed}${5: limit: ${6:number}}${7: offset: ${8:number}}}",
+      "  $0",
+      "endfor"
     ]
   },
   "Tag - Iteration | break": {
@@ -21,6 +21,6 @@
   "Tag - Iteration | cycle": {
     "prefix": "cycle",
     "description": "Loops through a group of strings and outputs them one at a time for each iteration of a for loop. The cycle tag must be used inside a for loop.",
-    "body": "cycle ${1:'${2:group}': }'$3', '$4"
+    "body": "cycle ${1:'${2:group}': }'$3', '$4'"
   }
 }
