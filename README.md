@@ -16,6 +16,7 @@ If you enjoy using this extension
 
 ## Features
 
+- HTML support
 - `{%- liquid -%}` support
 - Latest Filters
 - Latest Schema settings
@@ -31,19 +32,6 @@ If you enjoy using this extension
 - [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid)
 - [Liquid Languages Support](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
 - [Shopify Liquid Template Snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets)
-
-## Emmet
-
-Since Liquid is considered HTML, Emmet needs to know that they need to be associated with each other.
-
-1. Open the Command Palette (`Shift+Command+P` (Mac) / `Ctrl+Shift+P` (Windows/Linux))
-2. Type `Open User settings (JSON)` and press enter
-
-Add the following
-
-```
-"emmet.includeLanguages": { "liquid": "html" },
-```
 
 ## Snippets
 
