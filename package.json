@@ -5,7 +5,6 @@
   "version": "1.2.1",
   "publisher": "ways-agency",
   "icon": "assets/images/shopify-liquid-snippets-logo.png",
-  "preview": true,
   "scripts": {
     "package": "vsce package",
     "publish": "vsce publish"
@@ -26,15 +25,15 @@
   "activationEvents": [
     "onStartupFinished"
   ],
-  "main": "extension.js",
-  "engines": {
-    "vscode": "^1.72.0"
-  },
   "categories": [
     "Snippets"
   ],
+  "engines": {
+    "vscode": "^1.81.0"
+  },
   "extensionDependencies": [
-    "Shopify.theme-check-vscode"
+    "Shopify.theme-check-vscode",
+    "vscode.html-language-features"
   ],
   "keywords": [
     "shopify",
@@ -42,6 +41,30 @@
     "snippets"
   ],
   "contributes": {
+    "configurationDefaults": {
+      "emmet.includeLanguages": {
+        "liquid": "html"
+      }
+    },
+    "htmlLanguageParticipants": [
+      {
+        "autoInsert": true,
+        "languageId": "liquid"
+      }
+    ],
+    "languages": [
+      {
+        "id": "liquid",
+        "aliases": [
+          "Liquid",
+          "liquid"
+        ],
+        "extensions": [
+          ".liquid"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
     "snippets": [
       {
         "language": "liquid",
@@ -132,5 +155,9 @@
         "path": "./snippets/tags/html.code-snippets"
       }
     ]
+  },
+  "main": "extension.js",
+  "dependencies": {
+    "vscode-html-languageservice": "^5.0.7"
   }
 }
