@@ -1,0 +1,45 @@
+[
+  {
+    "detail": "Tag - Conditional | if",
+    "label": "if",
+    "description": "Renders an expression if a specific condition is true.",
+    "insertText": ["{%- if ${2:condition} -%}", "\t$0", "{%- endif -%}"]
+  },
+  {
+    "detail": "Tag - Conditional | elsif",
+    "label": "elsif",
+    "description": "You can use the elsif tag to check for multiple conditions.",
+    "insertText": ["{%- elsif ${2:condition} -%}", "\t$0"]
+  },
+  {
+    "detail": "Tag - Conditional | else",
+    "label": "else",
+    "description": "Allows you to specify a default expression to execute when no other condition is met or a for loop has zero length. You can use the else tag with the following tags: case, if, unless and for",
+    "insertText": ["{%- else -%}", "\t$0"]
+  },
+  {
+    "detail": "Tag - Conditional | unless",
+    "label": "unless",
+    "description": "Renders an expression unless a specific condition is true. Similar to the if tag, you can use elsif to add more conditions to an unless tag.",
+    "insertText": ["{%- unless ${2:condition} -%}", "\t$0", "{%- endunless -%}"]
+  },
+  {
+    "detail": "Tag - Conditional | case",
+    "label": "case",
+    "description": "Renders a specific expression depending on the value of a specific variable.",
+    "insertText": [
+      "{%- case ${2:variable} -%}",
+      "\t{%- when ${3:value} -%}",
+      "\t\t$4",
+      "\t{%- else -%}",
+      "\t\t$0",
+      "\t{%- endcase -%}"
+    ]
+  },
+  {
+    "detail": "Tag - Conditional | when",
+    "label": "when",
+    "description": "Add another value.",
+    "insertText": ["{%- when ${2:value} -%}", "\t$0"]
+  }
+]
