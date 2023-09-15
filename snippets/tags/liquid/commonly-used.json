@@ -1,0 +1,14 @@
+[
+  {
+    "detail": "Tag - Conditional | ifelse",
+    "label": "ifelse",
+    "description": "Renders an expression if a specific condition is true and specify a default expression to execute when no other condition is met.",
+    "insertText": ["if ${1:condition}", "\t$2", "else", "\t$0", "endif"]
+  },
+  {
+    "detail": "Tag - Conditional | unlesselse",
+    "label": "unlesselse",
+    "description": "Renders an expression unless a specific condition is true and specify a default expression to execute when no other condition is met.",
+    "insertText": ["unless ${1:condition}", "\t$2", "else", "\t$0", "endunless"]
+  }
+]
