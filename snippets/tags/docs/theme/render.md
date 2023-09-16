@@ -9,7 +9,7 @@ While you can't directly access created variables, you can access global objects
 Outside a snippet or app block, you can't access variables created inside the snippet or app block.
 
 **Note**  
-When you render a snippet using the `render` tag, you can't use the [`include` tag](https://shopify.dev/docs/api/liquid/tags/include) inside the snippet.
+When you render a snippet using the `render` tag, you can't use the [include tag](https://shopify.dev/docs/api/liquid/tags/include) inside the snippet.
 
 ```liquid
 {% render 'filename' %}

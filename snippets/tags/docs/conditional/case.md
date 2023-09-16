@@ -5,7 +5,7 @@ Renders a specific expression depending on the value of a specific variable.
 ---
 
 **Tip**  
-Similar to the [`if` tag](https://shopify.dev/docs/api/liquid/tags/if), you can use `elsif` to add more conditions to an `unless` tag.
+Similar to the [if tag](https://shopify.dev/docs/api/liquid/tags/if), you can use `elsif` to add more conditions to an `unless` tag.
 
 ```liquid
 {% case variable %}

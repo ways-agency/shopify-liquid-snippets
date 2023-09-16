@@ -1,6 +1,6 @@
 ## [else](https://shopify.dev/docs/api/liquid/tags/iteration-else)
 
-Allows you to specify a default expression to execute when a [`for` loop](https://shopify.dev/docs/api/liquid/tags/for) has zero length.
+Allows you to specify a default expression to execute when a [for loop](https://shopify.dev/docs/api/liquid/tags/for) has zero length.
 
 ```liquid
 {% for variable in array %}

@@ -2,7 +2,7 @@
 
 Splits an array's items across multiple pages.
 
-Because [`for` loops](https://shopify.dev/docs/api/liquid/tags/for) are limited to 50 iterations per page, you need to use the `paginate` tag to iterate over an array that has more than 50 items. The following arrays can be paginated:
+Because [for loops](https://shopify.dev/docs/api/liquid/tags/for) are limited to 50 iterations per page, you need to use the `paginate` tag to iterate over an array that has more than 50 items. The following arrays can be paginated:
 
 - [all_products](https://shopify.dev/docs/api/liquid/objects/all_products)
 - [article.comments](https://shopify.dev/docs/api/liquid/objects/article#article-comments)
