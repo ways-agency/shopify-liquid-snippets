@@ -6,6 +6,8 @@ function buildSnippet(tagTypes, context, basePath) {
   const completionItems = [];
 
   tagTypes.forEach((tagType) => {
+    if (!fs.existsSync(`${basePath}/${tagType}.json`)) return;
+
     // Liquid snippets
     const snippetsPath = path.join(`${basePath}/${tagType}.json`);
     const content = fs.readFileSync(snippetsPath, "utf-8");

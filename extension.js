@@ -6,13 +6,6 @@ const insideTags = require("./helpers/inside-tags");
 const buildSnippet = require("./helpers/build-snippet");
 
 function activate(context) {
-  const liquidTagTypes = [
-    "conditional",
-    "iteration",
-    "syntax",
-    "theme",
-    "variable",
-  ];
   const tagTypes = [
     "conditional",
     "html",
@@ -72,7 +65,7 @@ function activate(context) {
 
             if (insideLiquidTags) {
               completionItems.push(
-                ...buildSnippet(liquidTagTypes, context, tagsLiquidPath)
+                ...buildSnippet(tagTypes, context, tagsLiquidPath)
               );
             } else {
               completionItems.push(
