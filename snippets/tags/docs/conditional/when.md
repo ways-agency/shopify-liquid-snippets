@@ -1,4 +1,4 @@
-### [when](https://shopify.dev/docs/api/liquid/tags/case)
+## [when](https://shopify.dev/docs/api/liquid/tags/case)
 
 Determines the output based on the variable's value in order to render a specific expression.
 

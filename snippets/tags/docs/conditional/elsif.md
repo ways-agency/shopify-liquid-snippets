@@ -1,4 +1,4 @@
-### [elsif](https://shopify.dev/docs/api/liquid/tags/if#if-elsif)
+## [elsif](https://shopify.dev/docs/api/liquid/tags/if#if-elsif)
 
 You can use the `elsif` tag to check for multiple conditions.
 

@@ -1,8 +1,6 @@
-### [if](https://shopify.dev/docs/api/liquid/tags/if)
+## [if](https://shopify.dev/docs/api/liquid/tags/if)
 
 Renders an expression if a specific condition is `true`.
-
----
 
 ```liquid
 {% if condition %}
@@ -10,9 +8,7 @@ Renders an expression if a specific condition is `true`.
 {% endif %}
 ```
 
----
-
-**condition**  
+**`condition`**  
 The condition to evaluate.
 
 ---

@@ -1,4 +1,4 @@
-### [else](https://shopify.dev/docs/api/liquid/tags/conditional-else)
+## [else](https://shopify.dev/docs/api/liquid/tags/conditional-else)
 
 Allows you to specify a default expression to execute when no other condition is met.
 

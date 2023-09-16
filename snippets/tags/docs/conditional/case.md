@@ -1,14 +1,11 @@
-### [case](https://shopify.dev/docs/api/liquid/tags/case)
+## [case](https://shopify.dev/docs/api/liquid/tags/case)
 
 Renders a specific expression depending on the value of a specific variable.
 
 ---
 
-**Tip**
-
+**Tip**  
 Similar to the [`if` tag](https://shopify.dev/docs/api/liquid/tags/if), you can use `elsif` to add more conditions to an `unless` tag.
-
----
 
 ```liquid
 {% case variable %}
@@ -21,19 +18,17 @@ Similar to the [`if` tag](https://shopify.dev/docs/api/liquid/tags/if), you ca
 {% endcase %}
 ```
 
----
-
-**variable**  
+**`variable`**  
 The name of the variable you want to base your case statement on.
 
 ---
 
-**first_value**  
+**`first_value`**  
 A specific value to check for.
 
 ---
 
-**second_value**  
+**`second_value`**  
 A specific value to check for.
 
 ---
@@ -53,7 +48,7 @@ An expression to be rendered when the variable's value has no match.
 
 ---
 
-### Multiple values
+#### Multiple values
 
 ```
 {% case variable %}
