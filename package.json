@@ -137,22 +137,6 @@
       {
         "language": "liquid",
         "path": "./snippets/filters/tag.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/schema/content.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/schema/input-settings.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/schema/sidebar-settings.code-snippets"
-      },
-      {
-        "language": "liquid",
-        "path": "./snippets/tags/html.code-snippets"
       }
     ]
   },
