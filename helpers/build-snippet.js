@@ -19,6 +19,10 @@ function buildSnippet(tagTypes, context, basePath) {
         vscode.CompletionItemKind.Snippet
       );
 
+      if (snippet.detail) {
+        completionItem.detail = snippet.detail;
+      }
+
       // Set the snippet's body
       completionItem.insertText = new vscode.SnippetString(
         snippet.insertText.join("\n")
