@@ -7,6 +7,7 @@ const buildSnippet = require("./helpers/build-snippet");
 
 function activate(context) {
   const tagTypes = [
+    "commonly-used",
     "conditional",
     "html",
     "iteration",
@@ -15,8 +16,12 @@ function activate(context) {
     "variable",
   ];
   const snippetsBasePath = path.join(`${context.extensionPath}/snippets`);
+
   const tagsBasePath = path.join(`${snippetsBasePath}/tags`);
   const tagsLiquidPath = path.join(`${tagsBasePath}/liquid`);
+
+  const schemaTypes = ["content", "input-settings", "sidebar-settings"];
+  const schemaBasePath = path.join(`${snippetsBasePath}/schema`);
 
   const registerHtmlLanguageService =
     vscode.languages.registerCompletionItemProvider(
@@ -54,11 +59,16 @@ function activate(context) {
       {
         provideCompletionItems(document, position) {
           try {
-            // Check if the cursor is inside the {%- liquid ... -%} tags using a regex
             const insideLiquidTags = insideTags(
               document,
               position,
-              /\{%-\s*liquid([\s\S]*?)-%\}/g
+              /{%-?\s*liquid([\s\S]*?)-?%}/g
+            );
+
+            const insideSchemaTags = insideTags(
+              document,
+              position,
+              /{%-?\s*schema-?\s*%}([\s\S]*?){%-?\s*endschema-?\s*%}/g
             );
 
             const completionItems = [];
@@ -67,13 +77,16 @@ function activate(context) {
               completionItems.push(
                 ...buildSnippet(tagTypes, context, tagsLiquidPath)
               );
+            } else if (insideSchemaTags) {
+              completionItems.push(
+                ...buildSnippet(schemaTypes, context, schemaBasePath)
+              );
             } else {
               completionItems.push(
                 ...buildSnippet(tagTypes, context, tagsBasePath)
               );
             }
 
-            // If the cursor is not inside the {%- liquid -%} tags, return tags with syntax
             return completionItems;
           } catch (error) {
             // Handle errors here
