@@ -1,5 +1,29 @@
 [
   {
+    "detail": "Tag - Theme | schema",
+    "label": "schema",
+    "description": "This tag allows you to define various attributes of a section, such as the section name, any section blocks, and settings to allow for theme editor customization options.",
+    "insertText": [
+      "{% schema %}",
+      "  {",
+      "    \"name\": \"$1\",",
+      "    \"tag\": \"${3|section,article,aside,div,footer,header|}\",",
+      "    \"class\": \"$2\",",
+      "    \"settings\": [",
+      "      $0",
+      "    ],",
+      "    \"presets\": [",
+      "      {",
+      "        \"name\": \"$1\",",
+      "        \"settings\": {",
+      "        }",
+      "      }",
+      "    ]",
+      "  }",
+      "{% endschema %}"
+    ]
+  },
+  {
     "detail": "Tag - Theme | javascript",
     "label": "javascript",
     "description": "JavaScript code included in a section file. You need to use these tags only if your section or app block is meant to be installed on multiple themes or stores. Otherwise, you should include the JavaScript that your section needs in your theme's assets directory. Each section or app block can have only one {% javascript %} tag.",

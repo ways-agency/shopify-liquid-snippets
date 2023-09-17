@@ -1,17 +1,24 @@
-{
-  "Schema - Sidebar setting | _header": {
-    "prefix": "_header",
+[
+  {
+    "detail": "Schema - Sidebar setting | _header",
+    "label": "_header",
     "description": "A setting of type header outputs a header element to help you better organize your input settings.",
-    "body": ["{", "  \"type\": \"header\",", "  \"content\": \"$1\"", "}${3:,}"]
+    "insertText": [
+      "{",
+      "  \"type\": \"header\",",
+      "  \"content\": \"$1\"",
+      "}${3:,}"
+    ]
   },
-  "Schema - Sidebar setting | _paragraph": {
-    "prefix": "_paragraph",
+  {
+    "detail": "Schema - Sidebar setting | _paragraph",
+    "label": "_paragraph",
     "description": "A setting of type paragraph outputs a text element to help you better describe your input settings.",
-    "body": [
+    "insertText": [
       "{",
       "  \"type\": \"paragraph\",",
       "  \"content\": \"$1\"",
       "}${3:,}"
     ]
   }
-}
+]
