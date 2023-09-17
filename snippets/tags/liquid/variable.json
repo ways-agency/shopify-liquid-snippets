@@ -1,0 +1,26 @@
+[
+  {
+    "detail": "Tag - Variable | assign",
+    "label": "assign",
+    "description": "Creates a new variable. You can create variables of any basic type, object, or object property.",
+    "insertText": ["assign ${1:variable_name} = ${2:value}"]
+  },
+  {
+    "detail": "Tag - Variable | capture",
+    "label": "capture",
+    "description": "Creates a new variable with a string value. You can create complex strings with Liquid logic and variables.",
+    "insertText": ["capture ${1:variable}", "  $0", "endcapture"]
+  },
+  {
+    "detail": "Tag - Variable | decrement",
+    "label": "decrement",
+    "description": "Creates a new variable, with a default value of -1, that's decreased by 1 with each subsequent call.",
+    "insertText": ["decrement ${1:variable}"]
+  },
+  {
+    "detail": "Tag - Variable | increment",
+    "label": "increment",
+    "description": "Creates a new variable, with a default value of 0, that's increased by 1 with each subsequent call.",
+    "insertText": ["increment ${1:variable}"]
+  }
+]

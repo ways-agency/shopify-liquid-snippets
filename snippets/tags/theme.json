@@ -1,0 +1,70 @@
+[
+  {
+    "detail": "Tag - Theme | schema",
+    "label": "schema",
+    "description": "This tag allows you to define various attributes of a section, such as the section name, any section blocks, and settings to allow for theme editor customization options.",
+    "insertText": [
+      "{% schema %}",
+      "  {",
+      "    \"name\": \"$1\",",
+      "    \"tag\": \"${3|section,article,aside,div,footer,header|}\",",
+      "    \"class\": \"$2\",",
+      "    \"settings\": [",
+      "      $0",
+      "    ],",
+      "    \"presets\": [",
+      "      {",
+      "        \"name\": \"$1\",",
+      "        \"settings\": {",
+      "        }",
+      "      }",
+      "    ]",
+      "  }",
+      "{% endschema %}"
+    ]
+  },
+  {
+    "detail": "Tag - Theme | javascript",
+    "label": "javascript",
+    "description": "JavaScript code included in a section file. You need to use these tags only if your section or app block is meant to be installed on multiple themes or stores. Otherwise, you should include the JavaScript that your section needs in your theme's assets directory. Each section or app block can have only one {% javascript %} tag.",
+    "insertText": ["{%- javascript -%}", "  $0", "{%- endjavascript -%}"]
+  },
+  {
+    "detail": "Tag - Theme | layout",
+    "label": "layout",
+    "description": "Specify which layout to use.",
+    "insertText": ["{%- layout '$1' -%}"]
+  },
+  {
+    "detail": "Tag - Theme | layout:none",
+    "label": "layout:none",
+    "description": "Set layout to none.",
+    "insertText": ["{%- layout none -%}"]
+  },
+  {
+    "detail": "Tag - Theme | render",
+    "label": "render",
+    "description": "Renders a snippet or app block.",
+    "insertText": ["{%- render '$1'${2:, ${3:variable}: ${0:value}} -%}"]
+  },
+  {
+    "detail": "Tag - Theme | render:for",
+    "label": "render:for",
+    "description": "Renders a snippet or app block.",
+    "insertText": [
+      "{%- render '$1' for ${2:array}${3: as ${4:item}}${5:, ${6:variable}: ${0:value}} -%}"
+    ]
+  },
+  {
+    "detail": "Tag - Theme | section",
+    "label": "section",
+    "description": "Renders a section. Rendering a section with the section tag renders a section statically. To learn more about sections and how to use them in your theme, refer to Render a section.",
+    "insertText": ["{%- section '${1:name}' -%}"]
+  },
+  {
+    "detail": "Tag - Theme | stylesheet",
+    "label": "stylesheet",
+    "description": "CSS styles included in a section file. You need to use these tags only if your section or app block is meant to be installed on multiple themes or stores. Otherwise, you should include the CSS styles that your section needs in your theme's assets directory. Each section or app block can have only one {% stylesheet %} tag.",
+    "insertText": ["{%- stylesheet -%}", "  $0", "{%- endstylesheet -%}"]
+  }
+]

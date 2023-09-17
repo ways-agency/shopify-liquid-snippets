@@ -1,60 +1,41 @@
-{
-  "Tag - Schema | schema": {
-    "prefix": "schema",
-    "description": "This tag allows you to define various attributes of a section, such as the section name, any section blocks, and settings to allow for theme editor customization options.",
-    "body": [
-      "{% schema %}",
-      "  {",
-      "    \"name\": \"$1\",",
-      "    \"tag\": \"${3|section,article,aside,div,footer,header|}\",",
-      "    \"class\": \"$2\",",
-      "    \"settings\": [",
-      "      $0",
-      "    ],",
-      "    \"presets\": [",
-      "      {",
-      "        \"name\": \"$1\",",
-      "        \"settings\": {",
-      "        }",
-      "      }",
-      "    ]",
-      "  }",
-      "{% endschema %}",
-    ]
-  },
-  "Tag - Schema | _name": {
-    "prefix": "_name",
+[
+  {
+    "detail": "Tag - Schema | _name",
+    "label": "_name",
     "description": "The name attribute determines the section title that is shown in the theme editor.",
-    "body": "\"name\": \"$1\","
+    "insertText": ["\"name\": \"$1\","]
   },
-  "Tag - Schema | _tag": {
-    "prefix": "_tag",
+  {
+    "detail": "Tag - Schema | _tag",
+    "label": "_tag",
     "description": "By default, when Shopify renders a section, it's wrapped in a <div> element with a unique id attribute.",
-    "body": "\"tag\": \"${1|section,article,aside,div,footer,header|}\","
-  },
-  "Tag - Schema | _class": {
-    "prefix": "_class",
-    "description": "When Shopify renders a section, it's wrapped in an HTML element with a class of shopify-section. You can add to that class with the class attribute.",
-    "body": "\"class\": \"$1\","
-  },
-  "Tag - Schema | _limit": {
-    "prefix": "_limit",
-    "description": "By default, there's no limit to how many times a section can be added to a template or section group. You can specify a limit of 1 or 2 with the limit attribute.",
-    "body": "\"limit\": $1,"
-  },
-  "Tag - Schema | _settings": {
-    "prefix": "_settings",
-    "description": "You can create section specific settings to allow merchants to customize the section with the settings object.",
-    "body": [
-      "\"settings\": [",
-      "  $0",
-      "],",
+    "insertText": [
+      "\"tag\": \"${1|section,article,aside,div,footer,header|}\","
     ]
   },
-  "Tag - Schema | _blocks": {
-    "prefix": "_blocks",
+  {
+    "detail": "Tag - Schema | _class",
+    "label": "_class",
+    "description": "When Shopify renders a section, it's wrapped in an HTML element with a class of shopify-section. You can add to that class with the class attribute.",
+    "insertText": ["\"class\": \"$1\","]
+  },
+  {
+    "detail": "Tag - Schema | _limit",
+    "label": "_limit",
+    "description": "By default, there's no limit to how many times a section can be added to a template or section group. You can specify a limit of 1 or 2 with the limit attribute.",
+    "insertText": ["\"limit\": $1,"]
+  },
+  {
+    "detail": "Tag - Schema | _settings",
+    "label": "_settings",
+    "description": "You can create section specific settings to allow merchants to customize the section with the settings object.",
+    "insertText": ["\"settings\": [", "  $0", "],"]
+  },
+  {
+    "detail": "Tag - Schema | _blocks",
+    "label": "_blocks",
     "description": "You can create blocks for a section. Blocks are reusable modules of content that can be added, removed, and reordered within a section.",
-    "body": [
+    "insertText": [
       "\"blocks\": [",
       "  {",
       "    \"name\": \"$1\",",
@@ -66,15 +47,17 @@
       "],"
     ]
   },
-  "Tag - Schema | _max_blocks": {
-    "prefix": "_max_blocks",
+  {
+    "detail": "Tag - Schema | _max_blocks",
+    "label": "_max_blocks",
     "description": "There's a limit of 50 blocks per section. You can specify a lower limit with the max_blocks attribute.",
-    "body": "\"max_blocks\": $1,"
+    "insertText": ["\"max_blocks\": $1,"]
   },
-  "Tag - Schema | _presets": {
-    "prefix": "_presets",
+  {
+    "detail": "Tag - Schema | _presets",
+    "label": "_presets",
     "description": "Presets are default configurations of sections that enable merchants to easily add a section to a JSON template through the theme editor. Presets aren't related to theme styles that are defined in settings_data.json.",
-    "body": [
+    "insertText": [
       "\"presets\": [",
       "  {",
       "    \"name\": \"$1\",",
@@ -85,10 +68,11 @@
       "],"
     ]
   },
-  "Tag - Schema | _default": {
-    "prefix": "_default",
+  {
+    "detail": "Tag - Schema | _default",
+    "label": "_default",
     "description": "If you statically render a section, then you can define a default configuration with the default object, which has the same attributes as the preset object.",
-    "body": [
+    "insertText": [
       "\"default\": {",
       "  \"settings\": {",
       "    $0",
@@ -96,10 +80,11 @@
       "},"
     ]
   },
-  "Tag - Schema | _locales": {
-    "prefix": "_locales",
+  {
+    "detail": "Tag - Schema | _locales",
+    "label": "_locales",
     "description": "Sections can provide their own set of translated strings through the locales object. This is separate from the locales directory of the theme, which makes it a useful feature for sections that are meant to be installed on multiple themes or shops.",
-    "body": [
+    "insertText": [
       "\"locales\": {",
       "  \"${1:language}\": {",
       "    $0",
@@ -107,24 +92,26 @@
       "},"
     ]
   },
-  "Tag - Schema | _enabled_on": {
-    "prefix": "_enabled_on",
+  {
+    "detail": "Tag - Schema | _enabled_on",
+    "label": "_enabled_on",
     "description": "You can restrict a section to certain template page types and section group types by specifying them through the enabled_on attribute.",
-    "body": [
+    "insertText": [
       "\"enabled_on\": {",
       "  \"templates\": [\"$1\"],",
       "  \"groups\": [\"$2\"]",
       "},"
     ]
   },
-  "Tag - Schema | _disabled_on": {
-    "prefix": "_disabled_on",
+  {
+    "detail": "Tag - Schema | _disabled_on",
+    "label": "_disabled_on",
     "description": "You can prevent a section from being used on certain template page types and section group types by setting them in the disabled_on attribute. When you use disabled_on, the section is available to all templates and section groups except the ones that you specified.",
-    "body": [
+    "insertText": [
       "\"disabled_on \": {",
       "  \"templates\": [\"$1\"],",
       "  \"groups\": [\"$2\"]",
       "},"
     ]
-  },
-}
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "detail": "Tag - HTML | form",
+    "label": "form",
+    "description": "Generates an HTML <form> tag, including any required <input> tags to submit the form to a specific endpoint. Because there are many different form types available in Shopify themes, the form tag requires a type. Depending on the form type, an additional parameter might be required.",
+    "insertText": [
+      "{%- form '${1|activate_customer_password,cart,contact,create_customer,customer,customer_address,customer_address:new,customer_login,guest_login,localization,new_comment,product,recover_customer_password,reset_customer_password,storefront_password|}'${1/(activate_customer_password)|(cart)|(contact)|(create_customer)|(currency)|(customer)|(customer_address)|(customer_address:new)|(customer_login)|(guest_login)|(localization)|(new_comment)|(product)|(recover_customer_password)|(reset_customer_password)|(storefront_password)/${1:+ }${2:+, cart}${3:+ }${4:+ }${5:+ }${6:+ }${7:+, address}${8:+, customer.new_address}${9:+ }${10:+ }${11:+ }${12:+, article}${13:+, product}${14:+ }${15:+ }${16:+ }/}${2:, ${3:attribute}: '$4'} -%}",
+      "\t$0",
+      "{%- endform -%}"
+    ]
+  },
+  {
+    "detail": "Tag - HTML | style",
+    "label": "style",
+    "description": "Generates an HTML <style> tag with an attribute of data-shopify. If you reference color settings inside style tags, then the associated CSS rules will update as the setting is changed in the theme editor, without a page refresh.",
+    "insertText": ["{%- style -%}", "  $0", "{%- endstyle -%}"]
+  }
+]
