@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const vscode = require("vscode");
 const { getLanguageService } = require("vscode-html-languageservice");
+const { TextDocument } = require("vscode-languageserver-textdocument");
+
 const insideTags = require("./helpers/inside-tags");
 const buildSnippet = require("./helpers/build-snippet");
 
@@ -23,35 +25,57 @@ function activate(context) {
   const schemaTypes = ["content", "input-settings", "sidebar-settings"];
   const schemaBasePath = path.join(`${snippetsBasePath}/schema`);
 
-  const registerHtmlLanguageService =
-    vscode.languages.registerCompletionItemProvider(
-      "liquid", // Language ID for .liquid files
-      {
-        provideCompletionItems(document, position) {
+  const registerHTMLService = vscode.languages.registerCompletionItemProvider(
+    "liquid", // Language ID for .liquid files
+    {
+      provideCompletionItems(document, position) {
+        try {
           // Initialize HTML language service
-          const htmlLanguageService = getLanguageService();
+          const service = getLanguageService();
 
-          // Retrieve HTML autocompletion suggestions
-          const htmlCompletions = htmlLanguageService.doComplete(
-            document.getText(),
-            position
+          // Create a TextDocument object
+          const textDocument = TextDocument.create(
+            document.uri,
+            "liquid", // Use the appropriate language ID
+            document.version,
+            document.getText() // Retrieve the text content
           );
 
-          // Convert HTML completions to VS Code completion items
-          const completionItems = htmlCompletions.items.map((item) => {
+          // Retrieve HTML autocompletion suggestions
+          const completions = service.doComplete(
+            textDocument,
+            position,
+            service.parseHTMLDocument(textDocument)
+          );
+
+          // Return completion items
+          return completions.items.map((item) => {
+            // translate to vscode items
             const completionItem = new vscode.CompletionItem(
               item.label,
-              vscode.CompletionItemKind.Keyword
+              item.kind
             );
-            completionItem.documentation = item.documentation;
+
+            if (item.documentation?.value) {
+              completionItem.documentation = new vscode.MarkdownString(
+                item.documentation.value
+              );
+            }
+
+            // add insert text
+            completionItem.insertText = new vscode.SnippetString(
+              item.textEdit.newText
+            );
+
             return completionItem;
           });
-
-          return completionItems;
-        },
+        } catch (error) {
+          return [];
+        }
       },
-      "<" // Trigger autocompletion when '<' is typed
-    );
+    },
+    "<" // Trigger autocompletion when '<' is typed
+  );
 
   const registerLiquidSnippets =
     vscode.languages.registerCompletionItemProvider(
@@ -90,7 +114,6 @@ function activate(context) {
             return completionItems;
           } catch (error) {
             // Handle errors here
-            console.error("Error generating completion items:", error);
             return []; // Return an empty array or null to indicate no completions or handle the error gracefully.
           }
         },
@@ -98,10 +121,7 @@ function activate(context) {
     );
 
   // Register a completion provider for .liquid files
-  context.subscriptions.push(
-    registerHtmlLanguageService,
-    registerLiquidSnippets
-  );
+  context.subscriptions.push(registerHTMLService, registerLiquidSnippets);
 }
 
 module.exports = {

@@ -32,8 +32,7 @@
     "vscode": "^1.81.0"
   },
   "extensionDependencies": [
-    "Shopify.theme-check-vscode",
-    "vscode.html-language-features"
+    "Shopify.theme-check-vscode"
   ],
   "keywords": [
     "shopify",
@@ -46,25 +45,6 @@
         "liquid": "html"
       }
     },
-    "htmlLanguageParticipants": [
-      {
-        "autoInsert": true,
-        "languageId": "liquid"
-      }
-    ],
-    "languages": [
-      {
-        "id": "liquid",
-        "aliases": [
-          "Liquid",
-          "liquid"
-        ],
-        "extensions": [
-          ".liquid"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
     "snippets": [
       {
         "language": "liquid",
