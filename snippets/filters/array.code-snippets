@@ -17,7 +17,7 @@
     "Filter - Array | join": {
         "prefix": "join",
         "description": "Combines all of the items in an array into a single string, separated by a space.",
-        "body": "| join${1: '${0:,  }'}"
+        "body": "| join${1:: '${0:, }'}"
     },
     "Filter - Array | last": {
         "prefix": "last",
