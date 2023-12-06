@@ -71,3 +71,4 @@ If you enjoy using this extension
 ## Plans
 
 - Only suggest schema settings inside schema tag
+- Add markdown documentation with links to the official Shopify docs
