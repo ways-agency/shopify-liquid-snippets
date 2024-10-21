@@ -16,7 +16,6 @@ If you enjoy using this extension
 
 ## Features
 
-- HTML support
 - `{%- liquid -%}` support
 - Latest Filters
 - Latest Schema settings
@@ -36,6 +35,7 @@ If you enjoy using this extension
 ## Snippets
 
 - [Filters](https://shopify.dev/docs/api/liquid/filters)
+
   - [Array](https://shopify.dev/docs/api/liquid/filters/array-filters)
   - [Cart](https://shopify.dev/docs/api/liquid/filters/cart-filters)
   - [Collection](https://shopify.dev/docs/api/liquid/filters/collection-filters)
@@ -56,6 +56,7 @@ If you enjoy using this extension
   - [Tag](https://shopify.dev/docs/api/liquid/filters/tag-filters)
 
 - [Schema](https://shopify.dev/docs/themes/architecture/settings)
+
   - Content
   - [Input settings](https://shopify.dev/docs/themes/architecture/settings/input-settings)
   - [Sidebar settings](https://shopify.dev/docs/themes/architecture/settings/sidebar-settings)
