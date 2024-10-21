@@ -172,7 +172,7 @@
     "description": "A setting of type color outputs a color picker field. You can use these fields to capture a color selection for various theme elements, such as the body text color.",
     "insertText": [
       "{",
-      "  \"type\": \"color \",",
+      "  \"type\": \"color\",",
       "  \"id\": \"$1\",",
       "  \"label\": \"$2\",",
       "  \"default\": \"${3:#000000}\"",
