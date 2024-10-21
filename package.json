@@ -120,8 +120,5 @@
       }
     ]
   },
-  "main": "extension.js",
-  "dependencies": {
-    "vscode-html-languageservice": "^5.0.7"
-  }
+  "main": "extension.js"
 }
