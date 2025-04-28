@@ -1,10 +1,8 @@
-## [raw](https://shopify.dev/docs/api/liquid/tags/raw)
+## [doc](https://shopify.dev/docs/api/liquid/tags/doc)
 
 Documents template elements with annotations.
 
 The doc tag allows developers to include documentation within Liquid templates. Any content inside doc tags is not rendered or outputted. Liquid code inside will be parsed but not executed. This facilitates tooling support for features like code completion, linting, and inline documentation.
-
-
 
 ```liquid
 {% doc %}
