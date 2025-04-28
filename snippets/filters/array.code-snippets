@@ -9,10 +9,25 @@
         "description": "Concatenates (combines) two arrays.",
         "body": "| concat: ${0:array}"
     },
+    "Filter - Array | find": {
+        "prefix": "find",
+        "description": "Returns the first item in an array with a specific property value. This requires you to provide both the property name and the associated value.",
+        "body": "| find: '$0', '$1'"
+    },
+    "Filter - Array | find_index": {
+        "prefix": "find_index",
+        "description": "Returns the index of the first item in an array with a specific property value. This requires you to provide both the property name and the associated value.",
+        "body": "| find_index: '$0', '$1'"
+    },
     "Filter - Array | first": {
         "prefix": "first",
         "description": "Returns the first item in an array.",
         "body": "| first"
+    },
+    "Filter - Array | has": {
+        "prefix": "has",
+        "description": "Tests if any item in an array has a specific property value. This requires you to provide both the property name and the associated value.",
+        "body": "| has: '$0', '$1'"
     },
     "Filter - Array | join": {
         "prefix": "join",
@@ -28,6 +43,11 @@
         "prefix": "map",
         "description": "Creates an array of values from a specific property of the items in an array.",
         "body": "| map: '$0'"
+    },
+    "Filter - Array | reject": {
+        "prefix": "reject",
+        "description": "Filters an array to exclude items with a specific property value. This requires you to provide both the property name and the associated value.",
+        "body": "| reject: '$0', '$1'"
     },
     "Filter - Array | reverse": {
         "prefix": "reverse",
@@ -48,6 +68,11 @@
         "prefix": "sort_natural",
         "description": "Sorts the items in an array in case-insensitive alphabetical order.",
         "body": "| sort_natural${1:: '$0'}"
+    },
+    "Filter - Array | sum": {
+        "prefix": "sum",
+        "description": "Returns the sum of all elements in an array. For an array of Liquid objects, you can specify a property to sum.",
+        "body": "| sum${1:: '$0'}"
     },
     "Filter - Array | uniq": {
         "prefix": "uniq",
